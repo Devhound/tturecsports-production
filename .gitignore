@@ -1,0 +1,13 @@
+.vagrant
+node_modules
+dist
+bower_components
+ou
+
+index.html
+
+stylesheets/styles.css
+stylesheets/styles.css.map
+
+js/app.js
+js/app.js.map
