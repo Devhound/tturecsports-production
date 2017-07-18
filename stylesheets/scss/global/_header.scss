@@ -24,6 +24,7 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+    word-wrap: normal;
     transform: rotate(90deg);
     margin-bottom: 0;
     margin-left: 1rem;
@@ -51,7 +52,7 @@
       left: .25%;
       font-size: 3rem;
       line-height: 4rem;
-      max-width: 25rem;
+      max-width: 24rem;
     }
     @media (min-width: $breakpoint-desktop) {
       font-size: 2rem;
@@ -140,7 +141,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url('../images/ttu-aerial-1.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

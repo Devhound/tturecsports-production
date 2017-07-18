@@ -5,7 +5,6 @@
   @media (min-width: $breakpoint-desktop) {
     lost-center: 78.28%;
     justify-content: flex-end;
-    padding-top: 20%;
   }
 
   p {
@@ -37,37 +36,32 @@
 @lost gutter 0;
 
 // Headings
-.rec-header,
-.rec-sidebar,
-.rec-body {
+h2 {
+  color: $dark-grey;
+  font-family: $font-secondary;
+  font-size: 2.438rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  margin-top: 6rem;
 
-  h2 {
-    color: $dark-grey;
-    font-family: $font-secondary;
-    font-size: 2.438rem;
-    line-height: 3rem;
-    text-transform: uppercase;
-    margin-top: 6rem;
-
-    @media (min-width: $breakpoint-tablet-large) {
-      font-size: 3rem;
-      line-height: 3.3rem;
-    }
-    @media (min-width: $breakpoint-desktop) {
-      font-size: 2.438rem;
-      line-height: 2.8rem;
-    }
+  @media (min-width: $breakpoint-tablet-large) {
+    font-size: 3rem;
+    line-height: 3.3rem;
   }
-  h3 {
-    font-family: $font;
-    font-size: 1.438rem;
-    font-weight: 700;
-    text-transform: none;
-    margin-top: 4rem;
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 2.438rem;
+    line-height: 2.8rem;
+  }
+}
+h3 {
+  font-family: $font;
+  font-size: 1.438rem;
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 4rem;
 
-    @media (min-width: $breakpoint-tablet) {
-      font-size: 1.65rem;
-    }
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.65rem;
   }
 }
 

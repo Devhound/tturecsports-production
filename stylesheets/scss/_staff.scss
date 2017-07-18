@@ -1,0 +1,17 @@
+.rec-staff-header {
+  margin: 0 $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0 $page-margin-tablet;
+  }
+}
+
+.staff {
+  margin: 6rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 6rem $page-margin-tablet;
+  }
+
+  @import "staff/staff-member";
+}

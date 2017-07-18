@@ -19,7 +19,7 @@
             <h1>Rec Center Membership</h1>
             <div class="rec-header__image">
               <div class="top-left-triangle">
-                <div class="triangle-image"></div>
+                <div class="triangle-image" style="background-image: url('../images/ttu-aerial-1.jpg');"></div>
               </div>
             </div>
         </section>
