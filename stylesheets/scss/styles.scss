@@ -2,4 +2,9 @@
     $LIBRARIES
 \*------------------------------------*/
 @import "../bourbon/bourbon";
-@import "../neat/neat";
+@import "variables";
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+@import "global";

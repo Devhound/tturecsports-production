@@ -19,11 +19,11 @@ const injectOptions = {
 
 // Runs the working JS file through Babel so we can write in ES6
 gulp.task("babelScripts", () => {
-  return gulp.src(['js/site.js'])
+  return gulp.src(['js/rec.js'])
              .pipe($.babel({
                 presets: ['es2015']
              }))
-             .pipe($.rename('site-babel.js'))
+             .pipe($.rename('rec-babel.js'))
              .pipe(gulp.dest('js'))
 });
 
@@ -38,7 +38,7 @@ gulp.task("concatScripts", ["babelScripts"], () => {
                 'js/stickykit.js',
                 'js/wow.js',
                 'js/main.js',
-                'js/site.js'
+                'js/rec.js'
                 ])
             .pipe($.inject(injectFiles, injectOptions))
             .pipe($.sourcemaps.init())

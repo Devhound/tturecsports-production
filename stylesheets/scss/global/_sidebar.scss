@@ -1,0 +1,52 @@
+.rec-sidebar {
+  margin: 0 $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0 $page-margin-tablet;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    lost-column: 1/4;
+    order: 2;
+    text-align: right;
+  }
+  @media (min-width: $breakpoint-desktop-xl) {
+    padding-left: 5%;
+  }
+
+  h2 {
+
+    &:first-child {
+      margin-top: 2.5rem;
+
+      @media (min-width: $breakpoint-desktop) {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 1.438rem;
+      line-height: 2.1rem;
+    }
+  }
+
+  p {
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 1rem;
+    }
+  }
+
+  .rec-sidebar__hours {
+
+    span {
+      font-size: 1.75rem;
+      font-style: italic;
+      line-height: 1.2;
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 1.438rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
+}

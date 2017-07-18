@@ -1,0 +1,25 @@
+// Breakpoints
+$breakpoint-tablet: 600px;
+$breakpoint-tablet-large: 900px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-large: 1800px;
+$breakpoint-desktop-xl: 2000px;
+$breakpoint-desktop-huge: 2500px;
+
+// Colors
+$white: #fdfdfd;
+$black: #1b1b1b;
+$grey: #f3f3f3;
+$dark-grey: #8d8d8d;
+$darker-grey: #333333;
+$red: #ee0000;
+$dark-red: #900;
+
+// FONTS
+$font:#{"'ITC Charter W01'", Georgia, Garamond, serif};
+$font-secondary: #{"'Neue Helvetica W01'", Helvetica, Arial , sans-serif};
+$font-condensed: 'Neue Helvetica W02', Helvetica, Arial , sans-serif;
+
+// BODY
+$page-margin: 1.5rem;
+$page-margin-tablet: 2.5rem;

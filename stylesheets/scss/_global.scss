@@ -1,0 +1,134 @@
+// TTY Styles
+.l-main-pagecontent {
+  padding-top: 0;
+
+  @media (min-width: $breakpoint-desktop) {
+    lost-center: 78.28%;
+    justify-content: flex-end;
+    padding-top: 20%;
+  }
+
+  p {
+
+    @media (min-width: $breakpoint-desktop-large) {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  ol,
+  ul {
+
+    li {
+
+      @media (min-width: $breakpoint-desktop-large) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+.breadcrumb {
+  display: none;
+}
+
+// Grid
+@lost flexbox flex;
+@lost gutter 0;
+
+// Headings
+.rec-header,
+.rec-sidebar,
+.rec-body {
+
+  h2 {
+    color: $dark-grey;
+    font-family: $font-secondary;
+    font-size: 2.438rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-top: 6rem;
+
+    @media (min-width: $breakpoint-tablet-large) {
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 2.438rem;
+      line-height: 2.8rem;
+    }
+  }
+  h3 {
+    font-family: $font;
+    font-size: 1.438rem;
+    font-weight: 700;
+    text-transform: none;
+    margin-top: 4rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.65rem;
+    }
+  }
+}
+
+table {
+  border-spacing: 0;
+  margin: 3.5rem 0 5rem;
+
+  caption {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 2.438rem;
+    text-align: left;
+  }
+
+  thead {
+
+    tr {
+
+      th {
+        display: table-cell;
+        font-family: $font;
+        font-size: 1.438rem;
+        font-weight: 700;
+        text-transform: none;
+        padding: 1rem 0 .5rem;
+
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 1.65rem;
+        }
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      td {
+        display: table-cell;
+        padding: .75rem 0 .25rem;
+        width: 50%;
+
+        &:last-child {
+          text-align: right;
+          padding-left: .5rem;
+        }
+
+        &:before {
+          content: '';
+          display: none;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+          border-bottom: 1px solid #e4e4e4;
+          padding: 1.25rem 0 .5rem;
+        }
+      }
+    }
+  }
+}
+
+@import "global/header";
+@import "global/sidebar";
+@import "global/body";

@@ -2,7 +2,7 @@
 <html>
     <head>
         <?php include 'includes/ttu-head.html'; ?>
-        <title></title>
+        <title>Rec Center | TTU</title>
         <meta name="Description" content="">
     </head>
     <body>
