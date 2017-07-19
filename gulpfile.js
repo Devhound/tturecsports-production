@@ -26,7 +26,7 @@ gulp.task( 'clean', () => del(['dist', 'stylesheets/application.css*', 'js/app*.
 // Builds and sends all the files to the distribution folder
 gulp.task("build", ['concatScripts', 'compileSass'], () => {
   return gulp.src(["stylesheets/styles.css", "stylesheets/styles.css.map", "stylesheets/ttu.min.css",
-             "js/app.js", "js/app.js.map", 'index.php', "images/**", "includes/**"], { base: './'})
+             "js/app.js", "js/app.js.map", 'index.php', "images/**", "includes/**", "about/**", "membership/**", "staff/**"], { base: './'})
              .pipe(gulp.dest('dist'));
 });
 

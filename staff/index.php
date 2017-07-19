@@ -12,7 +12,7 @@
 
 
         <!-- CONTENT START -->
-        <section class="rec-header">
+        <section class="rec-header rec-header--large">
             <div class="rec-header__background">
               <div class="top-left-triangle"></div>
             </div>

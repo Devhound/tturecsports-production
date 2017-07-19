@@ -1,0 +1,60 @@
+.rec-about__rules {
+  padding: 1rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 2rem $page-margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    order: 2;
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop-large) {
+    padding-top: 3.5%;
+  }
+
+  @media (min-width: $breakpoint-desktop-huge) {
+    padding-top: 4%;
+  }
+
+  p,
+  ul li {
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    @media (min-width: $breakpoint-desktop-huge) {
+      max-width: 70%;
+    }
+  }
+
+  .rec-about-bottom-image {
+    background: url('../images/flag-football.jpg') center no-repeat;
+    background-size: cover;
+    width: calc(100% + 3rem);
+    height: 12rem;
+    transform: translateX(-1.5rem);
+
+    @media (min-width: $breakpoint-tablet) {
+      width: calc(100% + 5rem);
+      height: 18rem;
+      transform: translateX(-2.5rem);
+    }
+    @media (min-width: $breakpoint-desktop) {
+      width: 110%;
+      height: 14rem;
+      margin-top: 5rem;
+      transform: translateX(-36.5%);
+    }
+    @media (min-width: $breakpoint-desktop-xl) {
+      height: 18rem;
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      height: 22rem;
+    }
+  }
+}

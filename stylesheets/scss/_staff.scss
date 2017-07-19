@@ -6,13 +6,15 @@
   }
   @media (min-width: $breakpoint-desktop) {
     width: 40%;
-    padding-top: 10rem;
-  }
-  @media (min-width: $breakpoint-desktop-large) {
+    padding-top: 15rem;
     margin-bottom: 5rem;
   }
+  @media (min-width: $breakpoint-desktop-large) {
+    padding-top: 25rem;
+    margin-bottom: 12rem;
+  }
   @media (min-width: $breakpoint-desktop-xl) {
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
   @media (min-width: $breakpoint-desktop-huge) {
     padding-top: 17rem;

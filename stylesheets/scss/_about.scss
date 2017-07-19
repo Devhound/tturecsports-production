@@ -1,0 +1,35 @@
+.rec-about__header {
+  margin: 0 $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0 $page-margin-tablet 6rem;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    order: 1;
+    width: 40%;
+    padding-top: 15rem;
+    margin: 0 $page-margin-tablet 12.25% 20%;
+  }
+  @media (min-width: $breakpoint-desktop-large) {
+    padding-top: 25rem;
+    margin: 0 $page-margin-tablet 11.25% 20%;
+  }
+  @media (min-width: $breakpoint-desktop-xl) {
+    margin-bottom: 17.125%;
+  }
+  @media (min-width: $breakpoint-desktop-huge) {
+    margin-bottom: 26%;
+  }
+
+  p {
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 1rem;
+      line-height: 1.2;
+      max-width: 37.5rem;
+    }
+  }
+}
+
+@import "about/info";
+@import "about/rules";

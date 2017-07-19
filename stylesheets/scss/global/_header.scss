@@ -15,6 +15,22 @@
     width: 31.25%;
   }
 
+  &.rec-header--large {
+    @media (min-width: $breakpoint-desktop) {
+      width: 50%;
+    }
+
+    h1 {
+
+      @media (min-width: $breakpoint-desktop) {
+        left: 28%;
+      }
+      @media (min-width: $breakpoint-desktop-xl) {
+        left: 27%;
+      }
+    }
+  }
+
   h1 {
     position: absolute;
     top: 21.5%;
