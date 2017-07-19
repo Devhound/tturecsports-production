@@ -141,11 +141,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-position: center;
+        background-position: left top;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 150%;
-        height: 150%;
+        width: 125%;
+        height: 125%;
         transform: rotate(-45deg);
         filter: grayscale(100%);
       }

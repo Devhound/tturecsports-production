@@ -4,6 +4,27 @@
   @media (min-width: $breakpoint-tablet) {
     margin: 0 $page-margin-tablet;
   }
+  @media (min-width: $breakpoint-desktop) {
+    width: 40%;
+    padding-top: 10rem;
+  }
+  @media (min-width: $breakpoint-desktop-large) {
+    margin-bottom: 5rem;
+  }
+  @media (min-width: $breakpoint-desktop-xl) {
+    margin-bottom: 10rem;
+  }
+  @media (min-width: $breakpoint-desktop-huge) {
+    padding-top: 17rem;
+    margin-bottom: 15rem;
+  }
+
+  p {
+
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 37.5rem;
+    }
+  }
 }
 
 .staff {
@@ -11,6 +32,22 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin: 6rem $page-margin-tablet;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem $page-margin-tablet;
+  }
+  @media (min-width: $breakpoint-desktop-huge) {
+    margin: 3rem $page-margin-tablet;
+  }
+
+  h2 {
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 100%;
+    }
   }
 
   @import "staff/staff-member";

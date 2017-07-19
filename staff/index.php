@@ -19,7 +19,7 @@
             <h1>Professional Staff</h1>
             <div class="rec-header__image">
               <div class="top-left-triangle">
-                <div class="triangle-image" style="background-image: url('../images/ttu-aerial-1.jpg');"></div>
+                <div class="triangle-image" style="background-image: url('../images/rec-center.jpg');"></div>
               </div>
             </div>
         </section>
