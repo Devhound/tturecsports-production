@@ -79,7 +79,8 @@
                   position : latLng,
                   map      : recMap,
                   animation: google.maps.Animation.DROP,
-                  title    : 'Student Recreation Center (Robert H. Ewalt)'
+                  title    : 'Student Recreation Center (Robert H. Ewalt)',
+                  icon     : '../images/double-t-marker.png'
                 });
             }
         </script>
