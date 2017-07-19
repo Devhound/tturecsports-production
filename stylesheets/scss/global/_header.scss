@@ -17,8 +17,8 @@
 
   h1 {
     position: absolute;
-    top: 40%;
-    left: -12%;
+    top: 21.5%;
+    left: 38%;
     color: $red;
     font-family: $font-condensed;
     font-size: 2rem;
@@ -26,30 +26,33 @@
     text-transform: uppercase;
     word-wrap: normal;
     transform: rotate(90deg);
+    transform-origin: top left;
     margin-bottom: 0;
-    margin-left: 1rem;
+    margin-left: 0;
     max-width: 15rem;
     z-index: 3;
 
     &:before {
       content: '\2215\2215\2215';
       position: absolute;
-      left: -15%;
+      left: -2.5rem;
       letter-spacing: 5px;
 
+      @media (min-width: $breakpoint-tablet-large) {
+        content: '\2215\2215\2215';
+        left: -3.25rem;
+      }
       @media (min-width: $breakpoint-desktop) {
         content: '\2215\2215\2215';
-        left: -10%;
+        left: -2.5rem;
       }
     }
 
     @media (min-width: $breakpoint-tablet) {
-      top: 24.75%;
-      left: 1.75%;
+      top: 15%;
+      left: 28%;
     }
     @media (min-width: $breakpoint-tablet-large) {
-      top: 28%;
-      left: .25%;
       font-size: 3rem;
       line-height: 4rem;
       max-width: 24rem;
@@ -57,22 +60,17 @@
     @media (min-width: $breakpoint-desktop) {
       font-size: 2rem;
       line-height: 3.25rem;
-      top: 48%;
-      left: -29%;
+      left: 30%;
     }
     @media (min-width: $breakpoint-desktop-large) {
-      top: 41%;
-      left: -18%;
+      left: 29%;
     }
     @media (min-width: $breakpoint-desktop-xl) {
       font-size: 2.438rem;
       line-height: 3.5rem;
-      top: 38%;
-      left: -14%;
     }
     @media (min-width: $breakpoint-desktop-huge) {
-      top: 33%;
-      left: -6%;
+      left: 28%;
     }
   }
 
