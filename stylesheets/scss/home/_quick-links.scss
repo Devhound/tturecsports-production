@@ -1,5 +1,9 @@
 .rec-home__quick-links {
-  padding: 0 $page-margin;
+  padding: 2rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 4rem $page-margin;
+  }
 
   h2 {
     color: $dark-grey;
@@ -8,6 +12,10 @@
     &:before {
       content: '\2215\2215\2215';
       left: 0;
+
+      @media (min-width: $breakpoint-tablet) {
+        left: 25%;
+      }
     }
   }
 

@@ -11,6 +11,10 @@
       content: '';
       display: block;
       padding-top: 120%;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding-top: 100%;
+      }
     }
 
     .top-left-triangle {
@@ -21,6 +25,11 @@
       height: 200%;
       transform: rotate(52deg);
       overflow: hidden;
+
+      @media (min-width: $breakpoint-tablet) {
+        top: -115%;
+        left: -118%;
+      }
 
       @media (min-width: $breakpoint-desktop) {
         transform: rotate(45deg);
@@ -56,6 +65,11 @@
     transform-origin: top left;
     z-index: 3;
 
+    @media (min-width: $breakpoint-tablet) {
+      top: 30%;
+      left: 47%;
+    }
+
     &:before {
       content: '\2215\2215\2215';
       position: absolute;
@@ -87,6 +101,10 @@
     margin: 0;
     padding: 0;
     z-index: 2;
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 28%;
+    }
   }
 
   p {

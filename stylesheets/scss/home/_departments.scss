@@ -63,6 +63,10 @@
         content: '';
         display: block;
         padding-top: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+          padding-top: 80%;
+        }
       }
       &:after {
         content: '';
@@ -89,6 +93,10 @@
         margin: 0;
         z-index: 2;
         transition: all .4s;
+
+        @media (min-width: $breakpoint-tablet) {
+          right: 5%;
+        }
 
         &:before,
         &:after, {
