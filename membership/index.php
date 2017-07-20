@@ -24,7 +24,7 @@
             </div>
         </section>
         <section class="rec-sidebar">
-            <h2>/// Quick Facts</h2>
+            <h2>Quick Facts</h2>
             <p>For detailed membership information, you can always call our Main Office at <strong>806-742-3351</strong>.</p>
             <p class="rec-sidebar__hours">
                 <span>Our Main Office hours are:</span><br />
@@ -35,7 +35,7 @@
         </section>
         <section class="rec-body">
             <section>
-                <h2>/// Annual Membership Rates for 2016-17</h2>
+                <h2>Annual Membership Rates for 2016-17</h2>
                 <p>Annual memberships run from August 15, 2016 to August, 2017. New annual memberships may be purchased starting on August 15, 2016 in the main office of the Rec Center, room 202.</p>
                 <table>
                     <caption>*Prorated Rates as of January 2, 2017</caption>
@@ -152,7 +152,7 @@
                 </table>
             </section>
             <section>
-                <h2>/// 2016 Membership Contest Rules and Regulations</h2>
+                <h2>2016 Membership Contest Rules and Regulations</h2>
                 <ol>
                     <li>Must be a Texas Tech University or Texas Tech University Health Science Center Faculty or Staff.</li>
                     <li>Annual membership must be purchased between August 15 and September 9. The winner will be randomly selected and notified during the week of September 12 - 16, 2016.</li>
@@ -162,7 +162,7 @@
                 </ol>
             </section>
             <section>
-                <h2>/// Types of Memberships</h2>
+                <h2>Types of Memberships</h2>
                 <h3>Students</h3>
                 <p>Undergraduate and graduate students taking one (1) or more academic hours on the Lubbock campus will pay the Rec Sports semester fee. Some students will have a fee waiver in place and must purchase a membership in person at the Rec Sports Office or have Student Business Services activate the Rec Sports fee on their student accounts.</p>
 
@@ -184,7 +184,7 @@
                 <p><em>*All memberships may be purchased in the Rec Sports Office Room 202 SRC during office hours.</em></p>
             </section>
             <section>
-                <h2>/// Membership Policies</h2>
+                <h2>Membership Policies</h2>
                 <p><a href="#">Please Click Here for the Membership Policies</a></p>
             </section>
         </section>

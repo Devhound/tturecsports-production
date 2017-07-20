@@ -1,0 +1,95 @@
+.rec-home__facilities {
+  position: relative;
+
+  .rec-facilities__background {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 120%;
+    }
+
+    .top-left-triangle {
+      position: absolute;
+      top: -100%;
+      left: -110%;
+      width: 200%;
+      height: 200%;
+      transform: rotate(52deg);
+      overflow: hidden;
+
+      @media (min-width: $breakpoint-desktop) {
+        transform: rotate(45deg);
+        top: -121%;
+        left: -121%;
+      }
+
+      .triangle-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 125%;
+        height: 125%;
+        transform: rotate(-54deg);
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  h2 {
+    position: absolute;
+    top: 11%;
+    left: 44%;
+    color: $red;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    width: 100%;
+    margin: 0;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    z-index: 3;
+
+    &:before {
+      content: '\2215\2215\2215';
+      position: absolute;
+      left: -3rem;
+      letter-spacing: 5px;
+
+      @media (min-width: $breakpoint-tablet-large) {
+        content: '\2215\2215\2215';
+        left: -3.25rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        content: '\2215\2215\2215';
+        left: -2.5rem;
+      }
+    }
+  }
+
+  .rec-home__giant-letter {
+    position: absolute;
+    top: 8.75%;
+    left: 50.5%;
+    color: $white;
+    font-family: $font-secondary;
+    font-size: 25rem;
+    font-weight: 900;
+    line-height: 20rem;
+    text-shadow: 0 0 1.25rem rgba($darker-grey, 0.5);
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+  }
+
+  p {
+    padding: 0 $page-margin;
+  }
+}

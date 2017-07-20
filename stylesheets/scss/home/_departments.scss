@@ -1,0 +1,110 @@
+.rec-home__departments {
+
+  .rec-department {
+    position: relative;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    &:first-child {
+
+      a {
+        background-image: url('../images/people-walking-mountains.jpg');
+        background-position: 50% top;
+      }
+    }
+    &:nth-child(2) {
+
+      a {
+        background-image: url('../images/softball-catcher.jpg');
+        background-position: 35% top;
+      }
+    }
+    &:last-child {
+
+      a {
+        background-image: url('../images/man-swimming.jpg');
+        background-position: 100% top;
+      }
+    }
+
+    h3 {
+      color: $dark-grey;
+      font-family: $font-secondary;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 0 $page-margin 0 $page-margin * 2.5;
+
+      &:before {
+        content: '\2215\2215\2215';
+        position: absolute;
+        left: $page-margin;
+        letter-spacing: 5px;
+
+        @media (min-width: $breakpoint-tablet-large) {
+          content: '\2215\2215\2215';
+          // left: -3.25rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+          content: '\2215\2215\2215';
+          // left: -2.5rem;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: -11rem;
+        bottom: -11rem;
+        background-color: $white;
+        @include size(20rem);
+        transform: rotate(45deg);
+      }
+      &:hover {
+
+        .rec-department__plus {
+          transform: rotate(180deg);
+        }
+      }
+
+      .rec-department__plus {
+        position: absolute;
+        right: 15%;
+        bottom: .5%;
+        @include size(2rem);
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        transition: all .4s;
+
+        &:before,
+        &:after, {
+          content: '';
+          position: absolute;
+          top: 50%;
+          bottom: 50%;
+          background-color: $black;
+          width: 100%;
+          height: .125rem;
+        }
+        &:after {
+          content: '';
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

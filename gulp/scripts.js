@@ -38,7 +38,8 @@ gulp.task("concatScripts", ["babelScripts"], () => {
                 'js/stickykit.js',
                 'js/wow.js',
                 'js/main.js',
-                'js/rec.js'
+                'js/slick.min.js',
+                'js/rec-babel.js'
                 ])
             .pipe($.inject(injectFiles, injectOptions))
             .pipe($.sourcemaps.init())

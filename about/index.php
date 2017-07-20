@@ -66,7 +66,7 @@
 
         <script type="text/javascript">
             function initMap() {
-                var latLng = {lat: 33.5827037, lng: -101.884669}
+                var latLng = {lat: 33.5857505, lng: -101.8992785}
 
                 var recMap = new google.maps.Map(document.getElementById('rec-map'), {
                   center          : latLng,

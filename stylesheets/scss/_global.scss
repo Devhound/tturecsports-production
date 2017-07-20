@@ -40,9 +40,11 @@
 
 // Headings
 h2 {
+  position: relative;
   color: $dark-grey;
   font-family: $font-secondary;
   font-size: 2.438rem;
+  letter-spacing: .25rem;
   line-height: 3rem;
   text-transform: uppercase;
   margin-top: 6rem;
@@ -55,11 +57,28 @@ h2 {
     font-size: 2.438rem;
     line-height: 2.8rem;
   }
+
+  &:before {
+    content: '\2215\2215\2215';
+    position: absolute;
+    left: -2.5rem;
+    letter-spacing: 5px;
+
+    @media (min-width: $breakpoint-tablet-large) {
+      content: '\2215\2215\2215';
+      left: -3.25rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      content: '\2215\2215\2215';
+      left: -2.5rem;
+    }
+  }
 }
 h3 {
   font-family: $font;
   font-size: 1.438rem;
   font-weight: 700;
+  letter-spacing: .25rem;
   text-transform: none;
   margin-top: 4rem;
 

@@ -24,14 +24,14 @@
             </div>
         </section>
         <section class="rec-staff-header">
-            <h2>/// Our Staff</h2>
+            <h2>Our Staff</h2>
             <p>
                 Spicy jalapeno bacon ipsum dolor amet tri-tip drumstick shoulder, beef bacon sausage ham hock strip steak. Prosciutto hamburger rump ham hock beef ribs leberkas corned beef ham meatloaf short ribs. Flank venison hamburger ball tip. Cupim drumstick beef ribs, turkey sausage fatback tongue ham hock picanha prosciutto. Kielbasa pork loin hamburger ground round tail pancetta shankle cow. Flank doner swine shoulder, spare ribs ham hock kielbasa sirloin bacon porchetta bresaola pig hamburger rump.
             </p>
         </section>
 
         <section class="staff">
-            <h2>/// Director</h2>
+            <h2>Director</h2>
             <div class="staff-member">
                 <div class="staff-member__image">
                     <img src="../images/staff/peewee.gif" alt="Peewee Roberson">
@@ -54,7 +54,7 @@
         </section>
 
         <section class="staff">
-            <h2>/// Associate Directors</h2>
+            <h2>Associate Directors</h2>
             <div class="staff-member">
                 <div class="staff-member__image">
                     <img src="../images/staff/betty.jpg" alt="Betty Blanton">
@@ -125,7 +125,7 @@
         </section>
 
         <section class="staff">
-            <h2>/// Assistant Directors</h2>
+            <h2>Assistant Directors</h2>
             <div class="staff-member">
                 <div class="staff-member__image">
                     <img src="../images/staff/jared.gif" alt="Jared McCauley">
@@ -292,7 +292,7 @@
         </section>
 
         <section class="staff">
-          <h2>/// Coordinators</h2>
+          <h2>Coordinators</h2>
           <div class="staff-member">
             <div class="staff-member__image">
               <img src="../images/staff/johanna.gif" alt="Johanna Valencia">
@@ -334,7 +334,7 @@
         </section>
 
         <section class="staff">
-          <h2>/// Technology Support</h2>
+          <h2>Technology Support</h2>
           <div class="staff-member">
             <div class="staff-member__image">
               <img src="../images/staff/shane.jpg" alt="Shane Sanders">
@@ -357,7 +357,7 @@
         </section>
 
         <section class="staff">
-            <h2>/// Office Assistants</h2>
+            <h2>Office Assistants</h2>
             <div class="staff-member">
                 <div class="staff-member__image">
                     <img src="../images/staff/deborah.gif" alt="Deborah Bowen">
