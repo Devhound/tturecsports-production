@@ -1,11 +1,21 @@
 .rec-home__facilities {
   position: relative;
 
+  @media (min-width: $breakpoint-desktop) {
+    order: -1;
+    width: 71%;
+    margin-top: calc(110vh - 124px);
+  }
+
   .rec-facilities__background {
     position: relative;
     width: 100%;
     margin-bottom: 4rem;
     overflow: hidden;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 60%;
+    }
 
     &:before {
       content: '';
@@ -69,6 +79,10 @@
       top: 30%;
       left: 47%;
     }
+    @media (min-width: $breakpoint-desktop) {
+      top: 15.5%;
+      left: 27%;
+    }
 
     &:before {
       content: '\2215\2215\2215';
@@ -105,9 +119,27 @@
     @media (min-width: $breakpoint-tablet) {
       top: 28%;
     }
+    @media (min-width: $breakpoint-desktop) {
+      top: 13%;
+      left: 30%;
+    }
   }
 
-  p {
-    padding: 0 $page-margin;
+  .rec-home-facilities__text {
+
+    @media (min-width: $breakpoint-desktop) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+    }
+
+    p {
+      padding: 0 $page-margin;
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 1rem;
+      }
+    }
   }
 }

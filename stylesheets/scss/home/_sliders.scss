@@ -3,6 +3,11 @@
   margin: 3rem 0;
   overflow: hidden;
 
+  @media (min-width: $breakpoint-desktop) {
+    width: 127.66%;
+    margin-left: -13.75%;
+  }
+
   &:before,
   &:after {
     content: '';
