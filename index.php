@@ -13,9 +13,9 @@
 
         <!-- CONTENT START -->
             <section class="rec-home__hero">
-              <a href="#" class="rec-hours">Rec Hours</a>
-              <h2>This Month's Spotify Playlist</h2>
-              <a href="#" class="red-raider-runner">
+              <a href="#" class="rec-hours move-on-scroll">Rec Hours</a>
+              <h2 class="move-on-scroll">This Month's Spotify Playlist</h2>
+              <a href="#" class="red-raider-runner move-on-scroll">
                 <p>Red Raider</p>
                 <p>Runner</p>
               </a>
@@ -55,7 +55,7 @@
             </section>
 
             <section class="rec-home__sliders">
-                <div class="video-slider">
+                <div class="video-slider move-on-scroll">
                     <div class="video-slider__slide">
                         <div class="video-slide__image" style="background-image:url('images/woman-with-ropes.jpg');"></div>
                     </div>
