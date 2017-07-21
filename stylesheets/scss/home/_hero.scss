@@ -2,6 +2,7 @@
   position: relative;
   background: url('../images/runner-tying-shoes-bw.jpg') 60% top no-repeat;
   background-size: cover;
+  min-width: 100%;
   min-height: calc(100vh - 84px);
 
   @media (min-width: $breakpoint-desktop) {
@@ -41,8 +42,12 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 $page-margin 0 .625rem;
-    transition: .3s;
+    transition: all .3s;
     z-index: 2;
+
+    &:hover {
+      padding: 0 $page-margin 0 1.25rem;
+    }
 
     &:before {
       content: '';
@@ -76,6 +81,7 @@
     color: $white;
     font-size: 3.5rem;
     line-height: 3.9rem;
+    word-break: keep-all;
     margin: 0 $page-margin;
     padding-top: 25vh;
     max-width: 70%;
@@ -95,6 +101,19 @@
       margin: 0 $page-margin-desktop;
       max-width: 50%;
     }
+    @media (min-width: $breakpoint-desktop-large) {
+      padding-top: 16vh;
+      max-width: 40%;
+    }
+    @media (min-width: $breakpoint-desktop-xl) {
+      line-height: 9rem;
+      padding-top: 17vh;
+      max-width: 35%;
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      font-size: 9rem;
+      max-width: 34%;
+    }
 
     &:before {
       content: '';
@@ -105,6 +124,13 @@
   .red-raider-runner {
     position: relative;
     z-index: 2;
+
+    &:hover {
+
+      p {
+        padding: 0 1.25rem 0 $page-margin;
+      }
+    }
 
     p {
       display: block;
@@ -121,6 +147,7 @@
       text-transform: uppercase;
       padding: 0 .625rem 0 $page-margin;
       margin: 0;
+      transition: all .3s;
 
       @media (min-width: $breakpoint-tablet) {
         font-size: 2.438rem;
@@ -156,6 +183,9 @@
         }
         @media (min-width: $breakpoint-desktop) {
           margin-top: 3vh;
+        }
+        @media (min-width: $breakpoint-desktop-large) {
+          margin-top: 5vh;
         }
       }
       &:last-child {

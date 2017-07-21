@@ -1,15 +1,30 @@
 .rec-home__departments {
 
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 0 5rem;
+  }
+
   .rec-department {
     position: relative;
     margin-bottom: 3rem;
     overflow: hidden;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 25%;
+    }
 
     &:first-child {
 
       a {
         background-image: url('../images/people-walking-mountains.jpg');
         background-position: 50% top;
+
+        &:hover {
+          background-position: 47% top;
+        }
       }
     }
     &:nth-child(2) {
@@ -17,6 +32,10 @@
       a {
         background-image: url('../images/softball-catcher.jpg');
         background-position: 35% top;
+
+        &:hover {
+          background-position: 32% top;
+        }
       }
     }
     &:last-child {
@@ -24,6 +43,10 @@
       a {
         background-image: url('../images/man-swimming.jpg');
         background-position: 100% top;
+
+        &:hover {
+          background-position: 97% top;
+        }
       }
     }
 
@@ -34,19 +57,27 @@
       text-transform: uppercase;
       padding: 0 $page-margin 0 $page-margin * 2.5;
 
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 1.375rem;
+        padding: 0 1rem 0 2.5rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 1.825rem;
+        padding: 0 1rem 0 2.75rem;
+      }
+      @media (min-width: $breakpoint-desktop-xl) {
+        padding: 0 1rem 0 3.25rem;
+      }
+
       &:before {
         content: '\2215\2215\2215';
         position: absolute;
         left: $page-margin;
         letter-spacing: 5px;
 
-        @media (min-width: $breakpoint-tablet-large) {
-          content: '\2215\2215\2215';
-          // left: -3.25rem;
-        }
         @media (min-width: $breakpoint-desktop) {
           content: '\2215\2215\2215';
-          // left: -2.5rem;
+          left: .375rem;
         }
       }
     }
@@ -58,6 +89,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
+      transition: all .4s;
 
       &:before {
         content: '';
@@ -66,6 +98,9 @@
 
         @media (min-width: $breakpoint-tablet) {
           padding-top: 80%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+          padding-top: 100%;
         }
       }
       &:after {
@@ -76,11 +111,15 @@
         background-color: $white;
         @include size(20rem);
         transform: rotate(45deg);
+
+        @media (min-width: $breakpoint-desktop) {
+          @include size(18rem);
+        }
       }
       &:hover {
 
         .rec-department__plus {
-          transform: rotate(180deg);
+          transform: rotate(90deg);
         }
       }
 
@@ -96,6 +135,9 @@
 
         @media (min-width: $breakpoint-tablet) {
           right: 5%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+          right: 0;
         }
 
         &:before,

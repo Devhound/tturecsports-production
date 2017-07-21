@@ -83,6 +83,14 @@
       top: 15.5%;
       left: 27%;
     }
+    @media (min-width: $breakpoint-desktop-large) {
+      top: 23%;
+      left: 24.5%;
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      top: 32.5%;
+      left: 28.25%;
+    }
 
     &:before {
       content: '\2215\2215\2215';
@@ -123,6 +131,14 @@
       top: 13%;
       left: 30%;
     }
+    @media (min-width: $breakpoint-desktop-large) {
+      top: 20%;
+      left: 27%;
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      top: 30%;
+      left: 30%;
+    }
   }
 
   .rec-home-facilities__text {
@@ -133,12 +149,20 @@
       bottom: 0;
       width: 60%;
     }
+    @media (min-width: $breakpoint-desktop-large) {
+      padding-right: 2.5rem;
+      width: 50%;
+    }
 
     p {
       padding: 0 $page-margin;
 
       @media (min-width: $breakpoint-desktop) {
         font-size: 1rem;
+      }
+      @media (min-width: $breakpoint-desktop-huge) {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
       }
     }
   }

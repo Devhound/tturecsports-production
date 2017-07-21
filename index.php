@@ -24,19 +24,19 @@
             <section class="rec-home__quick-links">
               <h2>Quick Links</h2>
               <ul>
-                <li>Become a Member</li>
-                <li>intramural sports</li>
-                <li>group fitness schedule</li>
-                <li>opc trip schedule</li>
-                <li>sports clubs</li>
-                <li>activities at the pool</li>
-                <li>TTU Faculty/Staff </li>
-                <li>Fitness Challenge</li>
-                <li>turf field information</li>
-                <li>vertical plains</li>
-                <li>need a team for intramurals?</li>
-                <li>personal training</li>
-                <li>raider escape room</li>
+                <li><a href="#">Become a Member</a></li>
+                <li><a href="#">intramural sports</a></li>
+                <li><a href="#">group fitness schedule</a></li>
+                <li><a href="#">opc trip schedule</a></li>
+                <li><a href="#">sports clubs</a></li>
+                <li><a href="#">activities at the pool</a></li>
+                <li><a href="#">TTU Faculty/Staff</a> </li>
+                <li><a href="#">Fitness Challenge</a></li>
+                <li><a href="#">turf field information</a></li>
+                <li><a href="#">vertical plains</a></li>
+                <li><a href="#">need a team for intramurals?</a></li>
+                <li><a href="#">personal training</a></li>
+                <li><a href="#">raider escape room</a></li>
               </ul>
             </section>
 

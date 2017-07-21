@@ -4,8 +4,13 @@
   overflow: hidden;
 
   @media (min-width: $breakpoint-desktop) {
-    width: 127.66%;
-    margin-left: -13.75%;
+    margin: 5rem 0 3rem;
+    width: 127.7465508431272%;
+    overflow: visible;
+    transform: translateX(10.86%);
+  }
+  @media (min-width: $breakpoint-desktop) {
+    margin: 10rem 0 3rem;
   }
 
   &:before,
@@ -30,6 +35,20 @@
       top: -9%;
       left: -9%;
     }
+    @media (min-width: $breakpoint-desktop) {
+      top: -3rem;
+      left: 46%;
+      @include size(6rem);
+      z-index: 3;
+    }
+    @media (min-width: $breakpoint-desktop-large) {
+      top: -4rem;
+      @include size(8rem);
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      top: -5rem;
+      @include size(10rem);
+    }
   }
   &:after {
     content: '';
@@ -40,13 +59,25 @@
       right: -13%;
       bottom: -13%;
     }
-    @media (min-width: $breakpoint-tablet) {
-      right: -9%;
-      bottom: -9%;
+    @media (min-width: $breakpoint-tablet-large) {
+      right: -7rem;
+      bottom: -7.25rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      display: none;
+      @include size(14rem);
     }
   }
 
   .video-slider {
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 0;
+      right: 0;
+      width: 50%;
+      margin-left: 50%;
+      z-index: 2;
+    }
 
     .video-slider__slide {
       position: relative;
@@ -66,6 +97,9 @@
           @media (min-width: $breakpoint-tablet) {
             padding-top: 55%;
           }
+          @media (min-width: $breakpoint-desktop) {
+            // padding-top: 2rem;
+          }
         }
       }
     }
@@ -73,6 +107,10 @@
     .slick-arrow {
       position: absolute;
       left: -20%;
+
+      @media (min-width: $breakpoint-desktop) {
+        left: -120%;
+      }
     }
 
     .slick-dots {
@@ -81,10 +119,18 @@
       margin: .75rem $page-margin;
       z-index: 1;
 
+      @media (min-width: $breakpoint-desktop) {
+        margin: .75rem 0;
+      }
+
       li {
         display: inline-block;
         padding: 0;
         margin: 0 .5rem 0 0;
+
+        &:focus {
+          outline: none;
+        }
 
         &.slick-active {
 
@@ -98,6 +144,18 @@
           color: transparent;
           @include size(.75rem);
           border: 1px solid $white;
+          transition: all .3s;
+
+          &:focus {
+            outline: none;
+          }
+
+          @media (min-width: $breakpoint-desktop) {
+
+            &:hover {
+              background-color: $white;
+            }
+          }
         }
       }
     }
@@ -106,12 +164,62 @@
   .text-slider {
     background-image: linear-gradient(155deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 55%, rgba($black, 0.3) 100%), linear-gradient(155deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 55%, rgba($black, 0.3) 100%), linear-gradient(155deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 55%, rgba($black, 0.3) 100%), linear-gradient(155deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 55%, rgba($black, 0.3) 100%);
 
+    @media (min-width: $breakpoint-desktop) {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      background-image: linear-gradient(135deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 25%, rgba($darker-grey, 0.5) 75%), linear-gradient(135deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 25%, rgba($darker-grey, 0.5) 75%), linear-gradient(135deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 25%, rgba($darker-grey, 0.5) 75%), linear-gradient(135deg, rgba(237, 28, 36, 0.3) 0%, rgba(237, 28, 36, 0.3) 25%, rgba($darker-grey, 0.5) 75%);
+      padding-right: 50%;
+      padding-left: 10.86%;
+      margin-top: -13rem;
+      min-height: 25rem;
+      z-index: 1;
+      overflow: hidden;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -10.25rem;
+        bottom: -10.25rem;
+        background-color: $white;
+        @include size(20.5rem);
+        transform: rotate(45deg);
+        z-index: 2;
+
+        @media (min-width: $breakpoint-desktop-huge) {
+          right: -14rem;
+          bottom: -14rem;
+          @include size(28rem);
+        }
+      }
+    }
+    @media (min-width: $breakpoint-desktop-large) {
+      margin-top: -20.25rem;
+      min-height: 35rem;
+    }
+    @media (min-width: $breakpoint-desktop-xl) {
+      margin-top: -25rem;
+      min-height: 40rem;
+    }
+    @media (min-width: $breakpoint-desktop-huge) {
+      margin-top: -30rem;
+      min-height: 50rem;
+    }
+
     .text-slider__slide {
       text-align: center;
       padding: 3rem 0;
 
       @media (min-width: $breakpoint-tablet) {
         padding: 6rem 0;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        position: relative;
+        width: 50%;
       }
 
       h3,
@@ -120,6 +228,10 @@
         color: $black;
         font-family: $font-secondary;
         font-weight: 700;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 100%;
+        }
       }
 
       h3 {
@@ -127,6 +239,11 @@
         font-size: 1.25rem;
         text-transform: uppercase;
         margin: 0 0 1rem;
+
+        @media (min-width: $breakpoint-tablet-large) {
+          font-size: 1.5rem;
+          line-height: 1.6rem;
+        }
 
         &:before {
           content: '\2215\2215\2215';
@@ -140,6 +257,15 @@
           @media (min-width: $breakpoint-tablet-large) {
             left: 38%;
           }
+          @media (min-width: $breakpoint-desktop) {
+            left: 27%;
+          }
+          @media (min-width: $breakpoint-desktop-large) {
+            left: 30%;
+          }
+          @media (min-width: $breakpoint-desktop-huge) {
+            left: 35%;
+          }
         }
       }
 
@@ -148,12 +274,43 @@
         line-height: 3.6rem;
         text-transform: uppercase;
         margin: 1rem 0;
+
+        @media (min-width: $breakpoint-desktop-large) {
+          font-size: 5rem;
+          letter-spacing: .375rem;
+          line-height: 5.1rem;
+        }
+      }
+
+      p {
+
+        @media (min-width: $breakpoint-desktop-large) {
+          font-size: 1.625rem;
+          line-height: 1.75rem;
+        }
       }
 
       a {
         font-size: 1.375rem;
         line-height: 1.5rem;
         text-decoration: underline;
+
+        @media (min-width: $breakpoint-desktop-large) {
+          font-size: 2rem;
+          line-height: 2.1rem;
+        }
+
+        &:hover {
+          color: $grey;
+        }
+      }
+    }
+
+    .slick-track {
+
+      @media (min-width: $breakpoint-desktop) {
+        display: table;
+        height: 100%;
       }
     }
   }
