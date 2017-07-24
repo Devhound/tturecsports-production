@@ -94,18 +94,57 @@
                     <a href="#">
                         <div class="rec-department__plus"></div>
                     </a>
+                    <div class="rec-department__details">
+                      <ul>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/index.php">Leadership Development</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/rentals.php">Equipment Rentals</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/specialevents/verticalplains.php">Vertical Plains 2017</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/trips.php">Spring 2017 Trips</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/activities.php">Weekly Activities</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/climbing.php">Climbing Wall</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/bikeshop.php">Bike Shop</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/biketech.php">Bike Tech</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/faq.php">F.A.Q's</a></li>
+                      </ul>
+                    </div>
                 </div>
                 <div class="rec-department">
                     <h3>Intramurals</h3>
                     <a href="#">
                         <div class="rec-department__plus"></div>
                     </a>
+                    <div class="rec-department__details">
+                      <ul>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/index.php">Leadership Development</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/rentals.php">Equipment Rentals</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/specialevents/verticalplains.php">Vertical Plains 2017</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/trips.php">Spring 2017 Trips</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/activities.php">Weekly Activities</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/climbing.php">Climbing Wall</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/bikeshop.php">Bike Shop</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/biketech.php">Bike Tech</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/faq.php">F.A.Q's</a></li>
+                      </ul>
+                    </div>
                 </div>
                 <div class="rec-department">
                     <h3>Aquatics</h3>
                     <a href="#">
                         <div class="rec-department__plus"></div>
                     </a>
+                    <div class="rec-department__details">
+                      <ul>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/index.php">Leadership Development</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/rentals.php">Equipment Rentals</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/specialevents/verticalplains.php">Vertical Plains 2017</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/trips.php">Spring 2017 Trips</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/activities.php">Weekly Activities</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/climbing.php">Climbing Wall</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/bikeshop.php">Bike Shop</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/biketech.php">Bike Tech</a></li>
+                  	    <li><a href="http://www.depts.ttu.edu/recsports/opc/faq.php">F.A.Q's</a></li>
+                      </ul>
+                    </div>
                 </div>
             </section>
         <!-- CONTENT END -->

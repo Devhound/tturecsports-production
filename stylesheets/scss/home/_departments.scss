@@ -9,6 +9,7 @@
 
   .rec-department {
     position: relative;
+    background-color: $white;
     margin-bottom: 3rem;
     overflow: hidden;
 
@@ -18,8 +19,8 @@
 
     &:first-child {
 
-      a {
-        background-image: url('../images/people-walking-mountains.jpg');
+      & > a {
+        background-image: url('../images/people-walking-mountains-bw.jpg');
         background-position: 50% top;
 
         &:hover {
@@ -29,8 +30,8 @@
     }
     &:nth-child(2) {
 
-      a {
-        background-image: url('../images/softball-catcher.jpg');
+      & > a {
+        background-image: url('../images/softball-catcher-bw.jpg');
         background-position: 35% top;
 
         &:hover {
@@ -40,13 +41,60 @@
     }
     &:last-child {
 
-      a {
-        background-image: url('../images/man-swimming.jpg');
+      & > a {
+        background-image: url('../images/man-swimming-bw.jpg');
         background-position: 100% top;
 
         &:hover {
           background-position: 97% top;
         }
+      }
+    }
+    &.active {
+      overflow-y: scroll;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+
+      h3 {
+        transition: all .4s;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 100%;
+          // margin-bottom: 3rem;
+          margin-left: $page-margin-desktop;
+        }
+
+        &:before {
+          content: '\2215\2215\2215';
+
+          @media (min-width: $breakpoint-desktop) {
+            // left: $page-margin-desktop;
+          }
+        }
+      }
+
+      & > a {
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 30%;
+        }
+
+        .rec-department__plus {
+
+          @media (min-width: $breakpoint-desktop) {
+            right: 1.5%;
+          }
+        }
+      }
+
+      .rec-department__details {
+        display: block;
+        opacity: 1;
       }
     }
 
@@ -56,6 +104,7 @@
       font-weight: 900;
       text-transform: uppercase;
       padding: 0 $page-margin 0 $page-margin * 2.5;
+      transition: all .4s;
 
       @media (min-width: $breakpoint-desktop) {
         font-size: 1.375rem;
@@ -82,7 +131,7 @@
       }
     }
 
-    a {
+    & > a {
       position: relative;
       display: block;
       background-position: left top;
@@ -90,11 +139,15 @@
       background-size: cover;
       width: 100%;
       transition: all .4s;
+      z-index: 1;
 
       &:before {
         content: '';
         display: block;
+        background-image: linear-gradient(270deg, rgba($dark-red, 0.5) 0%, rgba($dark-red, 0.3) 50%, rgba($dark-red, 0) 80%);
+        background-blend-mode: multiply;
         padding-top: 100%;
+        transition: all .2s;
 
         @media (min-width: $breakpoint-tablet) {
           padding-top: 80%;
@@ -111,6 +164,8 @@
         background-color: $white;
         @include size(20rem);
         transform: rotate(45deg);
+        z-index: 2;
+        transition: all .4s;
 
         @media (min-width: $breakpoint-desktop) {
           @include size(18rem);
@@ -130,7 +185,7 @@
         @include size(2rem);
         padding: 0;
         margin: 0;
-        z-index: 2;
+        z-index: 3;
         transition: all .4s;
 
         @media (min-width: $breakpoint-tablet) {
@@ -149,10 +204,52 @@
           background-color: $black;
           width: 100%;
           height: .125rem;
+          transition: all .4s;
         }
         &:after {
           content: '';
           transform: rotate(90deg);
+        }
+        &.minus {
+
+          &:after {
+            content: '';
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+
+    .rec-department__details {
+      display: none;
+      position: relative;
+      padding: 4rem 1rem 2rem;
+      z-index: 3;
+      opacity: 0;
+      transition: all .4s;
+
+      @media (min-width: $breakpoint-desktop) {
+        padding: 0;
+        margin: 0 0 0 $page-margin-desktop;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+
+        li {
+
+          a {
+            color: $black;
+            font-family: $font-secondary;
+            font-weight: 700;
+            text-decoration: underline;
+            text-transform: uppercase;
+
+            &:hover {
+              color: $red;
+            }
+          }
         }
       }
     }
