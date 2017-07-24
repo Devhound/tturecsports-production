@@ -1,6 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
+  /**** INITIALIZING SLIDERS ****/
   $('.rec-home__sliders .video-slider').slick({
     dots: true,
     asNavFor: '.text-slider'

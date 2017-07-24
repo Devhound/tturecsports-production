@@ -13,6 +13,7 @@
   h2 {
     color: $dark-grey;
     text-align: center;
+    text-indent: 0;
 
     @media (min-width: $breakpoint-desktop) {
       font-size: 1.75rem;
