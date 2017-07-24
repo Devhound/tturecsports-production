@@ -24,7 +24,7 @@
             </div>
         </section>
         <section class="rec-about__header">
-          <h2>/// About</h2>
+          <h2>About</h2>
           <p>
             Turf Complex is 278,000 square feet and opened February 20th, 2015. The complex is lined with four flag football fields, two full size soccer fields, one Men's Lacrosse field, and one Women's Lacrosse field with plenty of room for open rec. On site, we offer equipment checkout which includes footballs, soccer balls, cones, and a variety of other sports equipment for users. The facility also houses a picnic area and has both men's and women's restrooms that are open during open hours.
           </p>
@@ -32,7 +32,7 @@
         <section class="rec-about__info">
             <div id="rec-map"></div>
             <div class="rec-hours">
-                <h2>/// Hours</h2>
+                <h2>Hours</h2>
                 <h3>Spring 2017 - Open</h3>
                 <h4>Sundays - Thrusdays / 6PM - 9PM | Fridays / 5PM - 9PM | Satrudays / Closed</h4>
                 <p>
@@ -43,7 +43,7 @@
             </div>
         </section>
         <section class="rec-about__rules">
-            <h2>/// Rules &amp; Regulations</h2>
+            <h2>Rules &amp; Regulations</h2>
             <p>The West Rec Complex is available for use by fee paying TTU students, faculty, and staff. TTU issued ID cards are required for use.Rec Sports reminds all participants that their participation is entirley voluntary and that due to inherent risk of accident or injury, Rec Sports assumes no responsibility for those injuries. Equipment may not be moved without permission of the Rec Sports staff. Fields may only be used when supervised by Rec Sports staff. If gates are locked, the complex is closed; unauthorized access may be considered trespassing.</p>
             <p><em>The following items are not allowed in the West Rec Complex:</em></p>
             <ul>

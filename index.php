@@ -43,7 +43,7 @@
             <section class="rec-home__facilities">
                 <div class="rec-facilities__background">
                     <div class="top-left-triangle">
-                        <div class="triangle-image" style="background-image: url('../images/rec-pool-bw.jpg');"></div>
+                        <div class="triangle-image" style="background-image: url('images/rec-pool-bw.jpg');"></div>
                     </div>
                 </div>
                 <h2>Facilities</h2>
