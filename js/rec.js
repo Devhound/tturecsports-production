@@ -61,8 +61,8 @@ $(document).ready(function(){
 
     if (!department.hasClass('active')) {
       // Set the position of the department link
-      departmentTop = department.offset().top - $(window).scrollTop();
-      departmentLeft = department.offset().left;
+      departmentTop = department.position().top;
+      departmentLeft = department.position().left;
       departmentWidth = department.css('width');
       departmentHeight = department.css('height');
 
@@ -78,20 +78,18 @@ $(document).ready(function(){
 
           // Setting the department to be fixed
           department.css({
-            'position'  : 'fixed',
+            'position'  : 'absolute',
             'top'       : departmentTop,
             'left'      : departmentLeft,
             'width'     : departmentWidth,
-            'height'    : departmentHeight,
             'z-index'   : 1000
           });
 
           // Animating the clicked department to fill the screen
           department.animate({
-            'top': 0,
-            'left': 0,
-            'width': '100%',
-            'min-height': '100vh'
+            'top': '0px',
+            'left': '0px',
+            'width': '100%'
           }, {
             start: function() {
               // Toggling the active class to set its styles
@@ -100,6 +98,9 @@ $(document).ready(function(){
               department.children('a').css({
                 'min-width': departmentWidth
               });
+            },
+            complete: function() {
+              department.children('.rec-department__details').css({'opacity': 1});
             }
           });
 
@@ -116,6 +117,7 @@ $(document).ready(function(){
           plus.toggleClass('minus');
           plus.removeAttr('style');
 
+          department.children('.rec-department__details').css({'opacity': 0});
         },
         complete: function(now, fx) {
 

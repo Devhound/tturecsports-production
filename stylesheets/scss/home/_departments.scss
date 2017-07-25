@@ -1,4 +1,6 @@
 .rec-home__departments {
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: $breakpoint-desktop) {
     display: flex;
@@ -58,6 +60,7 @@
         flex-wrap: wrap;
         align-content: flex-start;
         align-items: flex-start;
+        overflow-y: hidden;
       }
 
       h3 {
@@ -94,7 +97,6 @@
 
       .rec-department__details {
         display: block;
-        opacity: 1;
       }
     }
 

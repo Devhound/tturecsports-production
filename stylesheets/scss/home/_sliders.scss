@@ -4,13 +4,13 @@
   overflow: hidden;
 
   @media (min-width: $breakpoint-desktop) {
-    margin: 5rem 0 3rem;
+    margin: 5rem 0 0;
     width: 127.7465508431272%;
     overflow: visible;
     transform: translateX(10.86%);
   }
-  @media (min-width: $breakpoint-desktop) {
-    margin: 10rem 0 3rem;
+  @media (min-width: $breakpoint-desktop-large) {
+    margin: 10rem 0 0;
   }
 
   &:before,
