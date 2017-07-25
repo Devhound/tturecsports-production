@@ -17,15 +17,13 @@ $(document).ready(function () {
   $('.rec-home__hero').on('click', '.rec-hours-button', function (e) {
     e.preventDefault();
 
-    $('.l-main-pagecontent').animate({
-      'margin-right': '100%'
-    });
-
+    // Moves the hours in from the right
     $('.rec-hours').animate({
-      'width': '100%'
+      'right': '0'
     }, {
-      start: function start() {
-        $('.rec-hours').css({ 'z-index': '1000' });
+      complete: function complete() {
+        // Disabling scrolling of the page while hours are open
+        $("body").css("overflow", "hidden");
       }
     });
   });
@@ -33,15 +31,13 @@ $(document).ready(function () {
   $('.rec-hours').on('click', '.rec-hours__close', function (e) {
     e.preventDefault();
 
-    $('.l-main-pagecontent').animate({
-      'margin-right': '0'
-    });
-
+    // Pushes hours out to the right
     $('.rec-hours').animate({
-      'width': '0'
+      'right': '-100%'
     }, {
-      start: function start() {
-        $('.rec-hours').css({ 'z-index': '-1' });
+      complete: function complete() {
+        // Re-enables scrolling of the page when the hours are closed
+        $("body").css("overflow", "initial");
       }
     });
   });
