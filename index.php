@@ -13,7 +13,63 @@
 
         <!-- CONTENT START -->
             <section class="rec-home__hero">
-              <a href="#" class="rec-hours move-on-scroll">Rec Hours</a>
+              <a href="#" class="rec-hours-button move-on-scroll">Rec Hours</a>
+              <section class="rec-hours">
+                  <button class="rec-hours__close"></button>
+                  <div class="rec-hours__week">
+                      <p>Hours for week of</p>
+                      <h3>
+                          <?php echo date("n/j"); ?>
+                      </h3>
+                  </div>
+                  <div class="rec-hours__grid">
+                      <div class="rec-hours__department">
+                          <h4>Rec Center</h4>
+                          <div class="rec-hours-department__hours">
+                              <p>6AM - 12PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>Aquatic Center</h4>
+                          <div class="rec-hours-department__hours">
+                              <p>6AM - 8:45AM</p>
+                              <p>11AM - 8PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>Climbing Wall</h4>
+                          <div class="rec-hours-department__hours">
+                              <p>3PM - 9PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>Fit / Well</h4>
+                          <div class="rec-hours-department__hours">
+                              <p>8AM - 8PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>Main Office</h4>
+                          <div class="rec-hours-department__hours">
+                              <p>8AM - 5PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>OPC</h4>
+                          <p class="rec-hours-department__description">(Outdoor Pursuits Center)</p>
+                          <div class="rec-hours-department__hours">
+                              <p>12PM - 6PM</p>
+                          </div>
+                      </div>
+                      <div class="rec-hours__department">
+                          <h4>Turf Field</h4>
+                          <p class="rec-hours-department__description">(West Rec Complex)</p>
+                          <div class="rec-hours-department__hours">
+                              <p>8AM - 5PM</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
               <h2 class="move-on-scroll">This Month's Spotify Playlist</h2>
               <a href="#" class="red-raider-runner move-on-scroll">
                 <p>Red Raider</p>

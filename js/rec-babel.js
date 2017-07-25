@@ -13,6 +13,39 @@ $(document).ready(function () {
     asNavFor: '.video-slider'
   });
 
+  /**** SHOWING REC CENTER HOURS ****/
+  $('.rec-home__hero').on('click', '.rec-hours-button', function (e) {
+    e.preventDefault();
+
+    $('.l-main-pagecontent').animate({
+      'margin-right': '100%'
+    });
+
+    $('.rec-hours').animate({
+      'width': '100%'
+    }, {
+      start: function start() {
+        $('.rec-hours').css({ 'z-index': '1000' });
+      }
+    });
+  });
+
+  $('.rec-hours').on('click', '.rec-hours__close', function (e) {
+    e.preventDefault();
+
+    $('.l-main-pagecontent').animate({
+      'margin-right': '0'
+    });
+
+    $('.rec-hours').animate({
+      'width': '0'
+    }, {
+      start: function start() {
+        $('.rec-hours').css({ 'z-index': '-1' });
+      }
+    });
+  });
+
   /**** MAKE DEPARTMENTS FULLSCREEN ON CLICK ****/
   // Variables for the position of the department that gets clicked
   var departmentTop = void 0;
@@ -25,6 +58,7 @@ $(document).ready(function () {
     var department = $(this).closest('.rec-department');
     var plus = department.find('.rec-department__plus');
 
+    // Fading the other departments to hide strange positioning
     $('.rec-department').not(department).animate({ 'opacity': 0 });
 
     if (!department.hasClass('active')) {
@@ -54,6 +88,7 @@ $(document).ready(function () {
             'z-index': 1000
           });
 
+          // Animating the clicked department to fill the screen
           department.animate({
             'top': 0,
             'left': 0,
@@ -73,16 +108,17 @@ $(document).ready(function () {
       });
     } else {
 
+      // Turning the minus back into a plus first
       plus.animate({
         'opacity': '1'
       }, {
         start: function start() {
-          // Turning the minus back into a plus
           plus.toggleClass('minus');
           plus.removeAttr('style');
         },
         complete: function complete(now, fx) {
 
+          // Shrinking down details div
           department.children('.rec-department__details').animate({
             'height': '1px',
             'opacity': 0
@@ -92,6 +128,7 @@ $(document).ready(function () {
             }
           });
 
+          // Shrinking the department info and putting it back where it was
           department.animate({
             'width': departmentWidth,
             'height': departmentHeight,
@@ -104,9 +141,11 @@ $(document).ready(function () {
             complete: function complete() {
               // Toggling the active class to set its styles
               department.toggleClass('active');
+              // Removing all element styles set by the animation
               department.removeAttr('style');
               department.children('.rec-department__details').removeAttr('style');
 
+              // Bringing all the departments back into view
               $('.rec-department').not(department).animate({ 'opacity': 1 });
             }
           });
