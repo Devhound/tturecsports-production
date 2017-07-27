@@ -117,6 +117,10 @@
       &:hover {
         outline: none;
       }
+      &:hover {
+        cursor: pointer;
+        transform: rotate(135deg);
+      }
 
       &:before,
       &:after {
@@ -271,7 +275,7 @@
     }
   }
 
-  .red-raider-runner {
+  .rec-hero__call-to-action {
     position: relative;
     z-index: 2;
 
@@ -298,6 +302,7 @@
       padding: 0 .625rem 0 $page-margin;
       margin: 0;
       transition: all .3s;
+      will-change: transform;
 
       @media (min-width: $breakpoint-tablet) {
         font-size: 2.438rem;
@@ -317,6 +322,7 @@
       	height: 0;
       	border-top: 2.25rem solid $red;
       	border-right: 2.25rem solid transparent;
+        will-change: transform;
 
         @media (min-width: $breakpoint-tablet) {
           right: -3rem;
@@ -353,7 +359,7 @@
         	border-right: 1.875rem solid transparent;
 
           @media (min-width: $breakpoint-tablet) {
-            right: -2.525rem;
+            right: -2.5rem;
           	border-top: 2.525rem solid $red;
           	border-right: 2.525rem solid transparent;
           }

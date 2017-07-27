@@ -71,32 +71,26 @@
           // margin-bottom: 3rem;
           // margin-left: $page-margin-desktop;
         }
-
-        &:before {
-          content: '\2215\2215\2215';
-
-          @media (min-width: $breakpoint-desktop) {
-            // left: $page-margin-desktop;
-          }
-        }
       }
 
       & > a {
-
-        @media (min-width: $breakpoint-desktop) {
-          width: 30%;
-        }
 
         .rec-department__plus {
 
           @media (min-width: $breakpoint-desktop) {
             right: 1.5%;
           }
+
         }
       }
 
       .rec-department__details {
-        display: block;
+        display: flex;
+
+        & > * {
+          margin-top: 0;
+          margin-right: 4rem;
+        }
       }
     }
 
@@ -112,7 +106,7 @@
         font-size: 1.375rem;
         padding: 0 1rem 0 2.5rem;
       }
-      @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-desktop-large) {
         font-size: 1.825rem;
         padding: 0 1rem 0 2.75rem;
       }
@@ -139,14 +133,20 @@
       background-position: left top;
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100%;
+      width: 50%;
       transition: all .4s;
+      will-change: transform;
       z-index: 1;
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 100%;
+      }
 
       &:before {
         content: '';
         display: block;
-        background-image: linear-gradient(270deg, rgba($dark-red, 0.5) 0%, rgba($dark-red, 0.3) 50%, rgba($dark-red, 0) 80%);
+        // background-image: linear-gradient(270deg, rgba($dark-red, 0.5) 0%, rgba($dark-red, 0.3) 50%, rgba($dark-red, 0) 80%);
+        background-image: linear-gradient(55deg, rgba($black, 1) 0%, rgba($black, 0) 40%), linear-gradient(55deg, rgba($dark-red, 0) 0%, rgba($dark-red, 0.5) 20%, rgba($dark-red, 0.5) 65%, rgba($dark-red, 0) 90%);
         background-blend-mode: multiply;
         padding-top: 100%;
         transition: all .2s;
@@ -161,15 +161,17 @@
       &:after {
         content: '';
         position: absolute;
-        right: -11rem;
-        bottom: -11rem;
+        right: -5rem;
+        bottom: -5rem;
         background-color: $white;
-        @include size(20rem);
+        @include size(10rem);
         transform: rotate(45deg);
         z-index: 2;
         transition: all .4s;
 
         @media (min-width: $breakpoint-desktop) {
+          right: -11rem;
+          bottom: -11rem;
           @include size(18rem);
         }
       }
@@ -177,18 +179,23 @@
 
         .rec-department__plus {
           transform: rotate(90deg);
+
+          p {
+            color: $red;
+          }
         }
       }
 
       .rec-department__plus {
         position: absolute;
-        right: 15%;
+        right: .5%;
         bottom: .5%;
         @include size(2rem);
         padding: 0;
         margin: 0;
         z-index: 3;
         transition: all .4s;
+        will-change: transform;
 
         @media (min-width: $breakpoint-tablet) {
           right: 5%;
@@ -218,6 +225,19 @@
             content: '';
             transform: rotate(0);
           }
+        }
+
+        p {
+          position: absolute;
+          top: 40%;
+          right: 0;
+          color: $dark-grey;
+          font-family: $font-secondary;
+          font-size: .8rem;
+          text-transform: uppercase;
+          margin: 0;
+          transition: all .4s;
+          opacity: 0;
         }
       }
     }

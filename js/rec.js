@@ -8,6 +8,7 @@ $(document).ready(function(){
   $('.rec-home__sliders .text-slider').slick({
     arrows: false,
     swipe: false,
+    speed: 700,
     asNavFor: '.video-slider'
   });
 
@@ -53,6 +54,7 @@ $(document).ready(function(){
   $('.rec-home__departments').on('click', '.rec-department a', function(e) {
     e.preventDefault();
 
+    const departmentsTop = $('.rec-home__departments').offset().top - 84;
     const department = $(this).closest('.rec-department');
     const plus = department.find('.rec-department__plus');
 
@@ -65,12 +67,21 @@ $(document).ready(function(){
       departmentLeft = department.position().left;
       departmentWidth = department.css('width');
       departmentHeight = department.css('height');
+      let departmentImageWidth = departmentWidth;
+      if( $(window).width() < 1200 ) {
+        departmentImageWidth = '50%';
+      }
 
       // Turning the plus into a minus
       plus.toggleClass('minus');
       plus.animate({
         'bottom': '-.85rem'
       }, {
+        start: function() {
+          department.children('a').css({
+            'width': departmentImageWidth
+          });
+        },
         step: function() {
           plus.css({'transform': 'rotate(0)'});
         },
@@ -85,6 +96,12 @@ $(document).ready(function(){
             'z-index'   : 1000
           });
 
+          // Animating the close button up
+          department.find('.rec-department__plus p').animate({
+            top: '-15%',
+            opacity: 1
+          });
+
           // Animating the clicked department to fill the screen
           department.animate({
             'top': '0px',
@@ -92,12 +109,14 @@ $(document).ready(function(){
             'width': '100%'
           }, {
             start: function() {
+              $('html, body').animate({
+                scrollTop: departmentsTop
+              });
               // Toggling the active class to set its styles
               department.toggleClass('active');
 
-              department.children('a').css({
-                'min-width': departmentWidth
-              });
+              // Returning false to keep the scolling smooth
+              return false;
             },
             complete: function() {
               department.children('.rec-department__details').css({'opacity': 1});
@@ -114,6 +133,11 @@ $(document).ready(function(){
         'opacity': '1'
       }, {
         start: function() {
+          // Animating the close button down
+          department.find('.rec-department__plus p').animate({
+            top: '40%',
+            opacity: 0
+          }, 100);
           plus.toggleClass('minus');
           plus.removeAttr('style');
 
@@ -133,10 +157,10 @@ $(document).ready(function(){
 
           // Shrinking the department info and putting it back where it was
           department.animate({
-            'width'     : departmentWidth,
-            'height'    : departmentHeight,
-            'top'       : departmentTop,
-            'left'      : departmentLeft
+            'width' : departmentWidth,
+            'height': departmentHeight,
+            'top'   : departmentTop,
+            'left'  : departmentLeft
           },{
             start: function() {
               department.css({'min-height': '0px'});
@@ -147,6 +171,7 @@ $(document).ready(function(){
               // Removing all element styles set by the animation
               department.removeAttr('style');
               department.children('.rec-department__details').removeAttr('style');
+              department.find('.rec-department__plus p').removeAttr('style');
 
               // Bringing all the departments back into view
               $('.rec-department').not(department).animate({'opacity': 1});

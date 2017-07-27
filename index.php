@@ -71,7 +71,7 @@
                   </div>
               </section>
               <h2 class="move-on-scroll">This Month's Spotify Playlist</h2>
-              <a href="#" class="red-raider-runner move-on-scroll">
+              <a href="#" class="rec-hero__call-to-action move-on-scroll">
                 <p>Red Raider</p>
                 <p>Runner</p>
               </a>
@@ -148,7 +148,9 @@
                 <div class="rec-department">
                     <h3>OPC</h3>
                     <a href="#">
-                        <div class="rec-department__plus"></div>
+                        <div class="rec-department__plus">
+                          <p>Close</p>
+                        </div>
                     </a>
                     <div class="rec-department__details">
                       <ul>
@@ -167,7 +169,9 @@
                 <div class="rec-department">
                     <h3>Intramurals</h3>
                     <a href="#">
-                        <div class="rec-department__plus"></div>
+                        <div class="rec-department__plus">
+                            <p>Close</p>
+                        </div>
                     </a>
                     <div class="rec-department__details">
                       <ul>
@@ -186,7 +190,9 @@
                 <div class="rec-department">
                     <h3>Aquatics</h3>
                     <a href="#">
-                        <div class="rec-department__plus"></div>
+                        <div class="rec-department__plus">
+                            <p>Close</p>
+                        </div>
                     </a>
                     <div class="rec-department__details">
                       <ul>
