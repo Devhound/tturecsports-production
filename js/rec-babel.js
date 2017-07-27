@@ -190,34 +190,48 @@ $(document).ready(function () {
     $(this).css("transform", "translate3d(0px, " + distanceFromTop + ", 0px)");
   });
 
+  $('.move-on-scroll').css({ 'transform': 'translate3d(0,0,0)' });
+
+  // Variable to set the last scroll time
+  var lastScrollTime = 0;
   $(window).scroll(function () {
     var currentScrollTop = $(this).scrollTop();
+    var now = new Date();
 
-    // Test if scrolling up or down
-    if (currentScrollTop > lastScrollTop) {
-      // Scrolling down
-      $('.move-on-scroll').each(function () {
-        var currentPosition = getCurrentPosition(currentScrollTop, $(this));
-        var scrollDistance = lastScrollTop - currentScrollTop;
+    // Only letting scrolls happen once every 1.5 seconds
+    if (now > lastScrollTime + 1500) {
+      console.log('Scroll allowed');
 
-        //  $(this).animate({
-        //    'opacity': 1
-        //  }, {
-        //    step: function(now, fx) {
-        //     //  $(this).css({"transform": "translate3d(0px, " + (currentPosition + scrollDistance) + "px, 0px)"});
-        //     $(this).css({"transform": "translate3d(0px, " + currentPosition + "px, 0px)"});
-        //    },
-        //    duration: 2000,
-        //    easing: 'linear',
-        //    queue: false,
-        //    complete: function() {
-        //      console.log('Animation is complete!');
-        //     //  $(this).css({"transform": "translate3d(0px, " + currentPosition + "px, 0px)"});
-        //    }
-        //  }, 'linear');
-      });
-    } else {}
-    // Scrolling up
+      // Test if scrolling up or down
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        $('.move-on-scroll').each(function () {
+          var currentPosition = getCurrentPosition(currentScrollTop, $(this));
+          var scrollDistance = lastScrollTop - currentScrollTop;
+          console.log(currentPosition);
+
+          $(this).animate({
+            'opacity': 1
+          }, {
+            start: function start(now, fx) {
+              $(this).css({ "transform": "translate3d(0px, " + currentPosition + "px, 0px)" });
+            },
+            duration: 300,
+            easing: 'linear',
+            queue: false,
+            complete: function complete() {
+              console.log('Animation is complete!');
+              $(this).css({ "transform": "translate3d(0px, 0px, 0px)" });
+            }
+          }, 'linear');
+        });
+      } else {
+        // Scrolling up
+
+      }
+
+      lastScrollTime = now;
+    }
 
     // Setting the last scroll position
     lastScrollTop = currentScrollTop;
@@ -227,6 +241,6 @@ $(document).ready(function () {
   function getCurrentPosition(scrollTop, $element) {
     var elementOffset = $element.offset().top;
 
-    return elementOffset - scrollTop;
+    return scrollTop - elementOffset;
   }
 });

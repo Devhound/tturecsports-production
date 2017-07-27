@@ -70,10 +70,10 @@
                       </div>
                   </div>
               </section>
-              <h2 class="move-on-scroll">This Month's Spotify Playlist</h2>
-              <a href="#" class="rec-hero__call-to-action move-on-scroll">
-                <p>Red Raider</p>
-                <p>Runner</p>
+              <h2>This Month's Spotify Playlist</h2>
+              <a href="#" class="rec-hero__call-to-action">
+                <p class="move-on-scroll">Red Raider</p>
+                <p class="move-on-scroll">Runner</p>
               </a>
             </section>
 

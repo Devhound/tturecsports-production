@@ -13,7 +13,6 @@
     margin: 10rem 0 0;
   }
 
-  &:before,
   &:after {
     content: '';
     position: absolute;
@@ -21,34 +20,6 @@
     @include size(10rem);
     transform: rotate(45deg);
     z-index: 1;
-  }
-  &:before {
-    content: '';
-    top: -20%;
-    left: -30%;
-
-    @media (min-width: $breakpoint-tablet) {
-      top: -13%;
-      left: -13%;
-    }
-    @media (min-width: $breakpoint-tablet-large) {
-      top: -9%;
-      left: -9%;
-    }
-    @media (min-width: $breakpoint-desktop) {
-      top: -3rem;
-      left: 46%;
-      @include size(6rem);
-      z-index: 3;
-    }
-    @media (min-width: $breakpoint-desktop-large) {
-      top: -4rem;
-      @include size(8rem);
-    }
-    @media (min-width: $breakpoint-desktop-huge) {
-      top: -5rem;
-      @include size(10rem);
-    }
   }
   &:after {
     content: '';
@@ -77,6 +48,41 @@
       width: 50%;
       margin-left: 50%;
       z-index: 2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -30%;
+      background-color: $white;
+      @include size(10rem);
+      transform: rotate(45deg);
+      z-index: 1;
+
+      @media (min-width: $breakpoint-tablet) {
+        top: -22%;
+        left: -13%;
+      }
+      @media (min-width: $breakpoint-tablet-large) {
+        top: -16%;
+        left: -9%;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        top: -3rem;
+        left: -3rem;
+        @include size(6rem);
+        z-index: 3;
+      }
+      @media (min-width: $breakpoint-desktop-large) {
+        top: -4rem;
+        left: -4rem;
+        @include size(8rem);
+      }
+      @media (min-width: $breakpoint-desktop-huge) {
+        top: -5rem;
+        left: -5rem;
+        @include size(10rem);
+      }
     }
 
     .video-slider__slide {
