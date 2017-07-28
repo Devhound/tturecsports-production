@@ -18,19 +18,17 @@ $(document).ready(function () {
   var recHoursButtonOptions = {};
   if ($(window).width() < 1200) {
     recHoursButtonOptions = {
-      parent: 'body',
       offset_top: 84
     };
   } else {
     recHoursButtonOptions = {
-      parent: 'body',
       offset_top: -12
     };
   }
   $('.rec-hours-button').stick_in_parent(recHoursButtonOptions);
 
   /**** SHOWING REC CENTER HOURS ****/
-  $('.rec-home__hero').on('click', '.rec-hours-button', function (e) {
+  $('main').on('click', '.rec-hours-button', function (e) {
     e.preventDefault();
 
     // Moves the hours in from the right
