@@ -78,14 +78,6 @@
         line-height: 1.75rem;
       }
 
-      &:nth-child(odd) {
-        border-right: .125rem solid $black;
-
-        @media (min-width: $breakpoint-desktop) {
-          border-right: none;
-        }
-      }
-
       a {
         color: $black;
 

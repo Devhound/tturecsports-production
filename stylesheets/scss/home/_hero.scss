@@ -6,6 +6,7 @@
   min-height: calc(100vh - 84px);
   transform-style: preserve-3d;
   overflow: hidden;
+  z-index: 3;
 
   @media (min-width: $breakpoint-desktop) {
     position: absolute;
@@ -45,10 +46,11 @@
     text-transform: uppercase;
     padding: 0 $page-margin 0 .625rem;
     transition: all .3s;
-    z-index: 2;
+    z-index: 4;
 
     &:hover {
       padding: 0 $page-margin 0 1.25rem;
+      min-width: 227px;
     }
 
     &:before {
@@ -72,6 +74,7 @@
     @media (min-width: $breakpoint-tablet) {
       font-size: 2.438rem;
       line-height: 3rem;
+      min-width: 212px;
     }
     @media (min-width: $breakpoint-desktop) {
       margin: 4rem 3.5rem;
@@ -83,6 +86,7 @@
 
   .rec-hours {
     position: fixed;
+    top: 84px;
     right: -100%;
     background-color: $white;
     width: 100%;

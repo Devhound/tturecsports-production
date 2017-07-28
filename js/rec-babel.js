@@ -14,6 +14,21 @@ $(document).ready(function () {
     asNavFor: '.video-slider'
   });
 
+  /**** STICKING THE BUTTON UNDER THE NAV ****/
+  var recHoursButtonOptions = {};
+  if ($(window).width() < 1200) {
+    recHoursButtonOptions = {
+      parent: 'body',
+      offset_top: 84
+    };
+  } else {
+    recHoursButtonOptions = {
+      parent: 'body',
+      offset_top: -12
+    };
+  }
+  $('.rec-hours-button').stick_in_parent(recHoursButtonOptions);
+
   /**** SHOWING REC CENTER HOURS ****/
   $('.rec-home__hero').on('click', '.rec-hours-button', function (e) {
     e.preventDefault();
@@ -188,7 +203,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
       var currentScrollTop = $(this).scrollTop();
       var scrollDistance = lastScrollTop - currentScrollTop;
-      console.log(scrollDistance);
       var flexDistance = scrollDistance;
 
       // Making sure flex distance isn't more than 15

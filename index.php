@@ -13,7 +13,7 @@
 
         <!-- CONTENT START -->
             <section class="rec-home__hero">
-              <a href="#" class="rec-hours-button flex-on-scroll">Rec Hours</a>
+              <a href="#" class="rec-hours-button">Rec Hours</a>
               <section class="rec-hours">
                   <button class="rec-hours__close"></button>
                   <div class="rec-hours__week">
