@@ -57,7 +57,8 @@ $(document).ready(function () {
     var plus = department.find('.rec-department__plus');
 
     // Fading the other departments to hide strange positioning
-    $('.rec-department').not(department).animate({ 'opacity': 0 });
+    // $('.rec-department').not(department).animate({'opacity': 0});
+    $('.rec-department').animate({ 'opacity': 0 });
 
     if (!department.hasClass('active')) {
       // Set the position of the department link
@@ -117,6 +118,7 @@ $(document).ready(function () {
               return false;
             },
             complete: function complete() {
+              department.animate({ 'opacity': 1 });
               department.children('.rec-department__details').css({ 'opacity': 1 });
             }
           });
@@ -179,35 +181,44 @@ $(document).ready(function () {
   });
 
   /**** ELEMENTS MOVE ON SCROLL ****/
-  // Initial scrollTop
-  var lastScrollTop = 0;
+  if ($(window).width() > 1200) {
+    // Initial scrollTop
+    var lastScrollTop = 0;
 
-  $('.flex-on-scroll').css({ 'transform': 'translate3d(0,0,0)' });
+    $(window).scroll(function () {
+      var currentScrollTop = $(this).scrollTop();
+      var scrollDistance = lastScrollTop - currentScrollTop;
+      console.log(scrollDistance);
+      var flexDistance = scrollDistance;
 
-  // Variable to set the last scroll time
-  var lastScrollTime = 0;
-  $(window).scroll(function () {
-    var currentScrollTop = $(this).scrollTop();
+      // Making sure flex distance isn't more than 15
+      if (flexDistance > 15) {
+        flexDistance = 15;
+      } else if (flexDistance < -15) {
+        flexDistance = -15;
+      }
+      // console.log(flexDistance);
 
-    // Test if scrolling up or down
-    if (currentScrollTop > lastScrollTop) {
-      // Scrolling down
-      $('.flex-on-scroll').css({ "transition": "all .4s", "transform": "translate3d(0px, " + (lastScrollTop - currentScrollTop) * 1.25 + "px, 0px)" });
-    } else {
-      // Scrolling up
-      $('.flex-on-scroll').css({ "transition": "all .4s", "transform": "translate3d(0px, " + (lastScrollTop - currentScrollTop) * 1.25 + "px, 0px)" });
-    }
+      // Test if scrolling up or down
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        $('.flex-on-scroll').css({ "transition": "all .4s ease", "-webkit-transform": "translate3d(0px, " + flexDistance * 1.25 + "px, 0px)", "transform": "translate3d(0px, " + flexDistance * 1.25 + "px, 0px)" });
+      } else {
+        // Scrolling up
+        $('.flex-on-scroll').css({ "transition": "all .4s ease", "-webkit-transform": "translate3d(0px, " + flexDistance * 1.25 + "px, 0px)", "transform": "translate3d(0px, " + flexDistance * 1.25 + "px, 0px)" });
+      }
 
-    // Detect when the user stops scrolling and put the elements back in their positions
-    clearTimeout($.data(this, 'scrollTimer'));
-    $.data(this, 'scrollTimer', setTimeout(function () {
-      // do something
-      $('.flex-on-scroll').css({ "transition": "all 1.4s", "transform": "translate3d(0px, 0px, 0px)" });
-    }, 250));
+      // Detect when the user stops scrolling and put the elements back in their positions
+      clearTimeout($.data(this, 'scrollTimer'));
+      $.data(this, 'scrollTimer', setTimeout(function () {
+        // do something
+        $('.flex-on-scroll').css({ "transition": "all 1.4s ease", "-webkit-transform": "translate3d(0px, 0px, 0px)", "transform": "translate3d(0px, 0px, 0px)" });
+      }, 250));
 
-    // Setting the last scroll position
-    lastScrollTop = currentScrollTop;
-  });
+      // Setting the last scroll position
+      lastScrollTop = currentScrollTop;
+    });
+  }
 
   // Gets the current position of an element
   function getCurrentPosition(scrollTop, $element) {

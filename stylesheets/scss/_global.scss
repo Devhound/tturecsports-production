@@ -154,8 +154,10 @@ table {
   }
 }
 
-.move-on-scroll {
-  transition: all 0.2s;
+.flex-on-scroll {
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 0.4s ease;
+  will-change: transform;
 }
 
 @import "global/header";

@@ -1,6 +1,7 @@
 .rec-home__departments {
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
 
   @media (min-width: $breakpoint-desktop) {
     display: flex;
