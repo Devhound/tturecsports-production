@@ -72,8 +72,8 @@
             <section class="rec-home__hero">
               <h2>This Month's Spotify Playlist</h2>
               <a href="#" class="rec-hero__call-to-action">
-                <p class="flex-on-scroll">Red Raider</p>
-                <p class="flex-on-scroll">Runner</p>
+                <p>Red Raider</p>
+                <p>Runner</p>
               </a>
             </section>
 

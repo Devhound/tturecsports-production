@@ -20,6 +20,10 @@ $(document).ready(function () {
     recHoursButtonOptions = {
       offset_top: 84
     };
+  } else if ($(window).width() >= 1200 && $(window).width() < 2000) {
+    recHoursButtonOptions = {
+      offset_top: 20
+    };
   } else {
     recHoursButtonOptions = {
       offset_top: -12
@@ -203,11 +207,11 @@ $(document).ready(function () {
       var scrollDistance = lastScrollTop - currentScrollTop;
       var flexDistance = scrollDistance;
 
-      // Making sure flex distance isn't more than 15
-      if (flexDistance > 15) {
-        flexDistance = 15;
-      } else if (flexDistance < -15) {
-        flexDistance = -15;
+      // Making sure flex distance isn't more than 10
+      if (flexDistance > 10) {
+        flexDistance = 10;
+      } else if (flexDistance < -10) {
+        flexDistance = -10;
       }
       // console.log(flexDistance);
 
