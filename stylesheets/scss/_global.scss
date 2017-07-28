@@ -154,6 +154,10 @@ table {
   }
 }
 
+.move-on-scroll {
+  transition: all 0.2s;
+}
+
 @import "global/header";
 @import "global/sidebar";
 @import "global/body";

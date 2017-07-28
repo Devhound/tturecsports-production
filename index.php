@@ -13,7 +13,7 @@
 
         <!-- CONTENT START -->
             <section class="rec-home__hero">
-              <a href="#" class="rec-hours-button move-on-scroll">Rec Hours</a>
+              <a href="#" class="rec-hours-button flex-on-scroll">Rec Hours</a>
               <section class="rec-hours">
                   <button class="rec-hours__close"></button>
                   <div class="rec-hours__week">
@@ -72,8 +72,8 @@
               </section>
               <h2>This Month's Spotify Playlist</h2>
               <a href="#" class="rec-hero__call-to-action">
-                <p class="move-on-scroll">Red Raider</p>
-                <p class="move-on-scroll">Runner</p>
+                <p class="flex-on-scroll">Red Raider</p>
+                <p class="flex-on-scroll">Runner</p>
               </a>
             </section>
 
@@ -97,7 +97,7 @@
             </section>
 
             <section class="rec-home__facilities">
-                <div class="rec-facilities__background">
+                <div class="rec-facilities__background flex-on-scroll">
                     <div class="top-left-triangle">
                         <div class="triangle-image" style="background-image: url('images/rec-pool-bw.jpg');"></div>
                     </div>
@@ -111,7 +111,7 @@
             </section>
 
             <section class="rec-home__sliders">
-                <div class="video-slider move-on-scroll">
+                <div class="video-slider flex-on-scroll">
                     <div class="video-slider__slide">
                         <div class="video-slide__image" style="background-image:url('images/woman-with-ropes.jpg');"></div>
                     </div>
