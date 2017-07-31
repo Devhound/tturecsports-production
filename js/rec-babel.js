@@ -14,6 +14,9 @@ $(document).ready(function () {
     asNavFor: '.video-slider'
   });
 
+  /**** INITIALIZING prettyEmbed FOR VIDEOS ****/
+  $().prettyEmbed({ useFitVids: false });
+
   /**** STICKING THE BUTTON UNDER THE NAV ****/
   var recHoursButtonOptions = {};
   if ($(window).width() < 1200) {

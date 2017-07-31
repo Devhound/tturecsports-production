@@ -14,6 +14,11 @@ $(document).ready(function(){
 
 
 
+  /**** INITIALIZING prettyEmbed FOR VIDEOS ****/
+  $().prettyEmbed({ useFitVids: false });
+
+
+
   /**** STICKING THE BUTTON UNDER THE NAV ****/
   let recHoursButtonOptions = {};
   if ( $(window).width() < 1200 ) {

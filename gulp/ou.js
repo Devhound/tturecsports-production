@@ -20,6 +20,9 @@ gulp.task("ouBabel", () => {
 // Minifies and combines all JS files into one file
 gulp.task("ouScripts", ["babelScripts"], () => {
    return gulp.src([
+                'js/slick.min.js',
+                'js/jquery.waitforimages.min.js',
+                'js/jquery.prettyembed.min.js',
                 'js/rec-babel.js'
                 ])
             .pipe($.sourcemaps.init())

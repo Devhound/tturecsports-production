@@ -116,7 +116,7 @@
                         <div class="video-slide__image" style="background-image:url('images/woman-with-ropes.jpg');"></div>
                     </div>
                     <div class="video-slider__slide">
-                        <div class="video-slide__image" style="background-image:url('images/woman-with-ropes.jpg');"></div>
+                        <div class="pretty-embed video-slide__image" data-pe-videoid="_vxvF8UARm4" data-pe-fitvids="true"></div>
                     </div>
                     <div class="video-slider__slide">
                         <div class="video-slide__image" style="background-image:url('images/woman-with-ropes.jpg');"></div>

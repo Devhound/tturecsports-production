@@ -39,6 +39,8 @@ gulp.task("concatScripts", ["babelScripts"], () => {
                 'js/wow.js',
                 'js/main.js',
                 'js/slick.min.js',
+                'js/jquery.waitforimages.min.js',
+                'js/jquery.prettyembed.min.js',
                 'js/rec-babel.js'
                 ])
             .pipe($.inject(injectFiles, injectOptions))
