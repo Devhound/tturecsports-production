@@ -33,8 +33,11 @@ $siteTitle = 'Texas Tech University';
          <ul class="breadcrumbs">
 
             <li class="breadcrumbs-item"><a href="http://www.ttu.edu/" class="text-center icon-home">TTU</a></li>
-            <li class="breadcrumbs-item"><a href="/2017/admissions/"><?php echo $siteTitle; ?></a></li> 
+            <li class="breadcrumbs-item"><a href="/2017/admissions/"><?php echo $siteTitle; ?></a></li>
          </ul>
       </section>
       <!-- Main content = = = = = = = = = = = = = = = = = = = = = = = -->
       <section class="l-main-pagecontent">
+        <section class="standard-content">
+          <div>
+            <div class="large-9 large-centered columns">

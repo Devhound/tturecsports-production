@@ -1,15 +1,9 @@
 // TTY Styles
 .ttu-main-header {
-  z-index: 4;
+  z-index: 1001;
 }
 .l-main-pagecontent {
   padding-top: 0;
-
-  @media (min-width: $breakpoint-desktop) {
-    lost-center: 78.28%;
-    justify-content: flex-end;
-    padding-bottom: 3rem;
-  }
 
   p {
 
@@ -30,6 +24,27 @@
       }
     }
   }
+
+  /* This is to select the column IT added to put all the content in */
+  & > .standard-content {
+    width: 100%;
+
+    & > div {
+      width: 100%;
+      max-width: 100%;
+
+      & > div {
+        padding: 0;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+          lost-center: 78.28%;
+          justify-content: flex-end;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
 }
 .breadcrumb {
   display: none;
@@ -40,6 +55,9 @@
 .ttu-main-content {
   transform: none;
   will-change: auto;
+}
+.ou-btn {
+  z-index: 5000;
 }
 
 // Grid
