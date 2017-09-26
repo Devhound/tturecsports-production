@@ -71,10 +71,12 @@
         </section>
             <section class="rec-home__hero">
               <h2>This Month's Spotify Playlist</h2>
-              <a href="#" class="rec-hero__call-to-action">
-                <p>Red Raider</p>
-                <p>Runner</p>
-              </a>
+              <?php
+              echo '<a href="#" class="rec-hero__call-to-action">';
+                echo '<p>Red Raider</p>';
+                echo '<p>Runner</p>';
+              echo '</a>';
+              ?>
             </section>
 
             <section class="rec-home__quick-links">

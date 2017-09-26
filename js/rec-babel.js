@@ -69,7 +69,7 @@ $(document).ready(function () {
   var departmentLeft = void 0;
   var departmentWidth = void 0;
   var departmentHeight = void 0;
-  $('.rec-home__departments').on('click', '.rec-department a', function (e) {
+  $('.rec-home__departments').on('click', '.rec-department > a', function (e) {
     e.preventDefault();
 
     var departmentsTop = $('.rec-home__departments').offset().top - 84;

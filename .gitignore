@@ -3,6 +3,7 @@ node_modules
 dist
 bower_components
 ou
+keys
 
 index.html
 
@@ -11,3 +12,7 @@ stylesheets/styles.css.map
 
 js/app.js
 js/app.js.map
+
+calendar
+includes/Google
+include/vendor

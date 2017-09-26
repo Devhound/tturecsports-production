@@ -75,7 +75,7 @@ $(document).ready(function(){
   let departmentLeft;
   let departmentWidth;
   let departmentHeight;
-  $('.rec-home__departments').on('click', '.rec-department a', function(e) {
+  $('.rec-home__departments').on('click', '.rec-department > a', function(e) {
     e.preventDefault();
 
     const departmentsTop = $('.rec-home__departments').offset().top - 84;
