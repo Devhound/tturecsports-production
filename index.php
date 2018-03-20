@@ -42,8 +42,9 @@
             
             <section class="rec-home__hero">
                 <div id="hero">
-
-
+                    <noscript>
+		                <h2>Please enable JavaScript. <br>Click <a href="https://www.enable-javascript.com">here</a> for more info</h2>
+	                </noscript>
                 </div>
             </section>
         
