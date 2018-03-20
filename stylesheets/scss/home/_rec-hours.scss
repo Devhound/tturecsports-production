@@ -157,18 +157,22 @@
 
     .rec-hours__department {
       padding-bottom: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      
 
       @media (min-width: $breakpoint-tablet) {
         padding: 2rem 0;
-        width: 50%;
+        width: 100%;
       }
       @media (min-width: $breakpoint-desktop) {
         padding: 2rem 1rem 2rem 0;
-        width: 33%;
+        width: 100%;
       }
 
       h4,
-      p {
+      p,
+      td {
         font-family: $font-secondary;
         font-weight: 700;
         text-transform: uppercase;
@@ -187,7 +191,8 @@
         margin-top: -1.25rem;
         margin-bottom: 1.25rem;
       }
-      p {
+      p,
+      td {
         margin: .25rem 0 .5rem;
 
         @media (min-width: $breakpoint-tablet) {
@@ -198,4 +203,10 @@
       }
     }
   }
+}
+
+#calendar {
+  max-width: 900px;
+  width: 100%;
+  
 }

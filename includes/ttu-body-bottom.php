@@ -129,7 +129,7 @@
 </nav>
 <!-- TTU Search -->
 <div id="ttu-search" class="ttu-search">
-<form action="http://google.ttu.edu/search" method="post">
+<form action="//google.ttu.edu/search" method="post">
   <input name="site" type="hidden" value="Campus" />
   <input name="numgm" type="hidden" value="5" />
   <input name="client" type="hidden" value="texas_tech" />

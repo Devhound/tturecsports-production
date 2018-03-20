@@ -1,3 +1,9 @@
+@media (max-width: $breakpoint-tablet){
+.rec-header {
+  height: 50vh!important;
+ }
+}
+
 .rec-header {
   position: relative;
   width: 100%;
@@ -142,7 +148,7 @@
     right: 0;
     width: 68%;
     overflow: hidden;
-    box-shadow: -.25rem -.75rem 1rem rgba($darker-grey, 0.25);
+    box-shadow: unset;
     z-index: 2;
 
     &:before {
@@ -156,7 +162,7 @@
       width: 75%;
     }
     @media (min-width: $breakpoint-desktop) {
-      box-shadow: -.75rem -.75rem 1rem rgba($darker-grey, 0.25);
+      box-shadow: unset;
     }
 
     .top-left-triangle {

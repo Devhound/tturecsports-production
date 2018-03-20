@@ -2,6 +2,7 @@ $(document).ready(function(){
   /**** INITIALIZING SLIDERS ****/
   $('.rec-home__sliders .video-slider').slick({
     dots: true,
+    arrows: false,
     asNavFor: '.text-slider'
   });
 
@@ -94,7 +95,7 @@ $(document).ready(function(){
       departmentHeight = department.css('height');
       let departmentImageWidth = departmentWidth;
       if( $(window).width() < 1200 ) {
-        departmentImageWidth = '50%';
+        departmentImageWidth = '100%';
       }
 
       // Turning the plus into a minus
@@ -259,3 +260,6 @@ $(document).ready(function(){
   }
 
 });
+
+
+// start contentful connection and render events

@@ -2,6 +2,7 @@
   position: relative;
   margin: 0 $page-margin;
   padding-bottom: 3rem;
+  display: block;
 
   @media (min-width: $breakpoint-tablet) {
     margin: 0 $page-margin-tablet;
@@ -9,11 +10,14 @@
   @media (min-width: $breakpoint-desktop) {
     lost-column: 3/5;
     order: 1;
-    padding-top: 20%;
+    padding-top: 20vw;
     padding-right: 5%;
+    
   }
   @media (min-width: $breakpoint-desktop-large) {
     lost-column: 2/4;
+    margin-left: 0!important;
+    margin-right: 0;
   }
 
   section {

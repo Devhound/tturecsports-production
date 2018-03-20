@@ -1,4 +1,5 @@
 .rec-home__sliders {
+  display: block;
   position: relative;
   margin: 3rem 0;
   overflow: hidden;
@@ -36,7 +37,7 @@
       bottom: -7.25rem;
     }
     @media (min-width: $breakpoint-desktop) {
-      display: none;
+      
       @include size(14rem);
     }
   }
@@ -131,10 +132,11 @@
       position: absolute;
       list-style: none;
       margin: .75rem $page-margin;
-      z-index: 1;
+      z-index: 9999;
+      bottom: 5px;
 
       @media (min-width: $breakpoint-desktop) {
-        margin: .75rem 0;
+        margin: .75rem 1.5rem;
       }
 
       li {

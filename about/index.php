@@ -30,7 +30,7 @@
           </p>
         </section>
         <section class="rec-about__info">
-            <div id="rec-map"></div>
+            <div id="rec-map" style="background-image:url(/images/new-turf-map.png);"></div>
             <div class="rec-hours">
                 <h2>Hours</h2>
                 <h3>Spring 2017 - Open</h3>
@@ -64,7 +64,7 @@
             <div class="rec-about-bottom-image"></div>
         </section>
 
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             function initMap() {
                 var latLng = {lat: 33.5857505, lng: -101.8992785}
 
@@ -83,7 +83,7 @@
                   icon     : '../images/double-t-marker.png'
                 });
             }
-        </script>
+        </script> -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLJCBhcZGPsbDph1RxvuHPhUyfs2tE6uM&callback=initMap"
     async defer></script>
         <!-- CONTENT END -->

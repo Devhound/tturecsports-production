@@ -52,9 +52,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-position: center bottom;
+        background-position: left top;
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: #dddedf;
         width: 125%;
         height: 125%;
         transform: rotate(-54deg);
@@ -78,16 +79,16 @@
     z-index: 3;
 
     @media (min-width: $breakpoint-tablet) {
-      top: 30%;
-      left: 47%;
+      top: 20%;
+      left: 44%;
     }
     @media (min-width: $breakpoint-desktop) {
       top: 15.5%;
-      left: 27.5%;
+      left: 25.5%;
     }
     @media (min-width: $breakpoint-desktop-large) {
       top: 23%;
-      left: 25%;
+      left: 23%;
     }
     @media (min-width: $breakpoint-desktop-huge) {
       top: 32.5%;
@@ -127,7 +128,7 @@
     z-index: 2;
 
     @media (min-width: $breakpoint-tablet) {
-      top: 28%;
+      top: 15%;
     }
     @media (min-width: $breakpoint-desktop) {
       top: 13%;

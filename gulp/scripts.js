@@ -31,6 +31,7 @@ gulp.task("babelScripts", () => {
 gulp.task("concatScripts", ["babelScripts"], () => {
    return gulp.src([
                 'js/jquery-2.1.1.js',
+                'js/moment.min.js',
                 'js/jquery.mobile.custom.js',
                 'js/modernizr.js',
                 'js/scroll.js',
@@ -41,7 +42,10 @@ gulp.task("concatScripts", ["babelScripts"], () => {
                 'js/slick.min.js',
                 'js/jquery.waitforimages.min.js',
                 'js/jquery.prettyembed.min.js',
-                'js/rec-babel.js'
+                'js/rec-babel.js',
+                'js/fullcalendar.min.js',
+                'js/gcal.js',
+                'js/contentful.js'
                 ])
             .pipe($.inject(injectFiles, injectOptions))
             .pipe($.sourcemaps.init())
