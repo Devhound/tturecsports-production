@@ -12,6 +12,7 @@
 
 
         <!-- CONTENT START -->
+         
         <section class="rec-header">
             <div class="rec-header__background">
               <div class="top-left-triangle"></div>
@@ -24,7 +25,7 @@
             </div>
         </section>
         <section class="rec-sidebar">
-            
+          <?php include '../includes/hours-button.php'; ?>
         </section>
 
         <section class="rec-body">
@@ -606,7 +607,7 @@
         
         </div>
               
-
+            
             </section>
         </section>
         <!-- CONTENT END -->

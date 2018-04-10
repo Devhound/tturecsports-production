@@ -736,10 +736,13 @@ div.table-wrapper {
 }
 
 .l-main-pagecontent .news .card-product-hover-title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-family: 'Neue Helvetica W01', Helvetica, Arial, sans-serif;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  font-weight: 700;
   margin-bottom: 0;
-  line-height: 2.2rem;
+  line-height: 1.5rem;
   margin-top: 0;
   padding: 0;
 }
@@ -763,8 +766,6 @@ div.table-wrapper {
   flex: 1 0 auto;
   padding: 1rem;
   margin-bottom: 3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .news .card-product-hover-details > :last-child {
@@ -997,12 +998,26 @@ div.table-wrapper {
 
 .rec-home__herobg {
   position: absolute;
-  background: 60% top no-repeat;
+  background: 50% top no-repeat;
   background-size: cover;
   min-width: 100%;
   min-height: 100vh;
   height: 100%;
   transform-style: preserve-3d;
+}
+
+[rec-home-bg] {
+  position: absolute;
+  background: 50% top no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+[rec-home-bg] img {
+  display: none;
 }
 
 @media only screen and (min-width: 1000px) {
