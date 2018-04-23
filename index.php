@@ -8,6 +8,29 @@
 
     </head>
     <body>
+    <style>
+      .info-bar {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #1b1b1b;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        font-family: 'Neue Helvetica W01', Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      } 
+      .info-bar p>a {
+        font-family: 'Neue Helvetica W01', Helvetica, Arial, sans-serif;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+    </style>
         <?php include 'includes/ttu-body-top.php'; ?>
 
 
@@ -39,14 +62,32 @@
             <!-- <section id="hero-placeholder">
                     <h1 class="loading">Loading<span>.</span><span>.</span><span>.</span></h1>
             </section> -->
+
+            <style>
+            .hero-slider {
+              width: 100%;
+              height: 100%;
+            }
+            </style>
             
             <section class="rec-home__hero">
+            <div class="info-bar"><p><a class="external" href="https://google.com">Students! Complete our survey for a chance to win $100!</a></p></div>
                 <div id="hero">
+                  <div class="hero-slider">
+                    <div><h3>1</h3></div>
+                    <div><h3>2</h3></div>
+                    <div><h3>3</h3></div>
+                    <div><h3>4</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>6</h3></div>
+                    </div>
                     <noscript>
 		                <h2>Please enable JavaScript. <br>Click <a href="https://www.enable-javascript.com">here</a> for more info</h2>
 	                </noscript>
                 </div>
             </section>
+
+            
         
 
 
@@ -302,10 +343,11 @@
 
         <?php include 'includes/ttu-body-bottom.php'; ?>
 
-
+        <script>
+          $(".info-bar").delay(1000).slideDown(500);
+        </script>
         <script type='text/javascript'>
 $(document).ready(function() {
-
       $("#calendar").fullCalendar({
 
 
@@ -341,8 +383,13 @@ $(document).ready(function() {
     });
   </script>
 
-  <script>
-    
-  </script>
+            <script>
+              $('.hero-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+              })
+            </script>
 
 </html>
