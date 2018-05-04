@@ -249,3 +249,119 @@ $(document).ready(function () {
 });
 
 // start contentful connection and render events
+
+
+// start contentful connection and render events
+
+
+var client = contentful.createClient({
+  accessToken: "96028a28b956299023a49cd3a5a18938f0c6104c71314ac5ae72c7a4266e88e2",
+  space: "6p2l1peqtu1e"
+});
+
+var pageTitle = document.title;
+var newsCards = document.querySelector("#news");
+var heroSection = document.querySelector("#hero");
+var documentSelector = document.querySelector("#content");
+var pageContentSelection = document.querySelector("#content") !== null;
+var heroSectionSelection = document.querySelector("#hero") !== null;
+var newsCardsSelection = document.querySelector("#news") !== null;
+
+// ****************!!!!!!TRANSPILE TO BABEL FIRST!!!!!!!*********************
+
+function fetchNewsItems() {
+  return client.getEntries({
+    content_type: "newsItem",
+    limit: 3
+  }).then(function (response) {
+    return response.items;
+  }).catch(function (error) {
+    console.log("\nError occured while fetching entries for news item:");
+    console.error(error);
+  });
+}
+
+function fetchHeroContent() {
+  return client.getEntries({
+    content_type: "heroContent",
+    limit: 1
+  }).then(function (response) {
+    return response.items;
+  }).catch(function (error) {
+    console.log("\nError occured while fetching entries for hero content:");
+    console.error(error);
+  });
+}
+
+function fetchWebPages() {
+  return client.getEntries({
+    content_type: "webPages",
+    "fields.pageTitle[match]": pageTitle,
+    include: 2
+  }).then(function (response) {
+    return response.items;
+  }).catch(function (error) {
+    console.log("\nError occured while fetching entries for news item:");
+    console.error(error);
+  });
+}
+
+if (pageContentSelection) {
+  fetchWebPages().then(function (entry) {
+    documentSelector.innerHTML += entry.map(function (webPages) {
+      return '\n        <div class="flexslider">\n        <ul class="slides">\n        <li data-thumb="http:' + webPages.fields.slideImages[0].fields.file.url + '?w=900&h=506&fit=fill">\n          <img src="http:' + webPages.fields.slideImages[0].fields.file.url + '?w=900&h=506&fit=fill" />\n        </li>\n        <li data-thumb="http:' + webPages.fields.slideImages[1].fields.file.url + '?w=900&h=506&fit=fill">\n          <img src="http:' + webPages.fields.slideImages[1].fields.file.url + '?w=900&h=506&fit=fill" />\n        </li>\n        <li data-thumb="http:' + webPages.fields.slideImages[2].fields.file.url + '?w=900&h=506&fit=fill">\n          <img src="http:' + webPages.fields.slideImages[2].fields.file.url + '?w=900&h=506&fit=fill" />\n        </li>\n        </ul>\n        </div>\n          <section>\n            ' + marked(webPages.fields.pageContent) + '\n          </section>';
+    }).join(" ");
+  });
+} else {
+  console.log("no page selector");
+}
+
+if (heroSectionSelection) {
+  fetchHeroContent().then(function (heroContent) {
+    heroSection.innerHTML += heroContent.map(function (heroContent) {
+      return '\n      <div class="rec-home__herobg" style="background-image:url(' + heroContent.fields.heroImage.fields.file.url + ')">\n      </div>\n      <h2>' + heroContent.fields.heroTitle + '</h2>\n        <a href="' + heroContent.fields.heroLink + ' " class="rec-hero__call-to-action">\n            <p>Learn</p>\n            <p>more</p>\n        </a>\n    ';
+    }).join("");
+  });
+} else {
+  console.log("no hero selector");
+}
+
+if (newsCardsSelection) {
+  fetchNewsItems().then(function (newsItem) {
+    newsCards.innerHTML += newsItem.map(function (newsItem) {
+      return '\n    <div class="large-4 medium-12 column tilespacer">\n        <div class="card card-product-hover">\n        \n            <div class="card-product-hover-details">\n            <p class="card-product-hover-title">' + newsItem.fields.newsTitle + '</p>\n            <p class="card-product-hover-date">' + newsItem.fields.newsDescription + '</p>\n            <p class="news-button"><a href="' + newsItem.fields.newsLink + '"><button>Learn more</button></a></p>\n                </div>\n            </div>\n        </div>';
+    }).join("");
+    ll.update();
+  });
+} else {
+  console.log("No news selector");
+}
+
+// client
+//   .sync({
+//     initial: true,
+//     nextSyncToken: window.localStorage.getItem("contentfulSyncToken")
+//   })
+//   .then(response => {
+//     const responseObj = JSON.parse(response.stringifySafe());
+//     const entries = responseObj.entries;
+//     window.localStorage.setItem("contentfulEntries", JSON.stringify(entries));
+//     console.log(response.deletedEntries);
+//     console.log(response.deletedAssets);
+//     // store the new token
+//     window.localStorage.setItem("contentfulSyncToken", response.nextSyncToken);
+//   });
+
+
+// Destroy placeholder
+
+window.addEventListener("load", function (event) {
+  document.getElementById("news").style.visibility = "visible";
+});
+
+function load() {
+  console.log("Placeholders destroyed");
+  document.getElementById("placeholders").style.display = "none";
+}
+
+window.onload = load;

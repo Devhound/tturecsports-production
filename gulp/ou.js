@@ -24,7 +24,7 @@ gulp.task("ouScripts", ["babelScripts"], () => {
                 'js/jquery.waitforimages.min.js',
                 'js/jquery.prettyembed.min.js',
                 'js/moment.min.js',
-                'js/rec-babel.js'
+                'js/rec-babel.js',
                 ])
             .pipe($.sourcemaps.init())
             .pipe($.concat('app.js'))

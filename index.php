@@ -62,25 +62,10 @@
             <!-- <section id="hero-placeholder">
                     <h1 class="loading">Loading<span>.</span><span>.</span><span>.</span></h1>
             </section> -->
-
-            <style>
-            .hero-slider {
-              width: 100%;
-              height: 100%;
-            }
-            </style>
             
             <section class="rec-home__hero">
             <div class="info-bar"><p><a class="external" href="https://google.com">Students! Complete our survey for a chance to win $100!</a></p></div>
                 <div id="hero">
-                  <div class="hero-slider">
-                    <div><h3>1</h3></div>
-                    <div><h3>2</h3></div>
-                    <div><h3>3</h3></div>
-                    <div><h3>4</h3></div>
-                    <div><h3>5</h3></div>
-                    <div><h3>6</h3></div>
-                    </div>
                     <noscript>
 		                <h2>Please enable JavaScript. <br>Click <a href="https://www.enable-javascript.com">here</a> for more info</h2>
 	                </noscript>
@@ -331,7 +316,6 @@
                 ll.update();
             });
         </script>
-    </body>
 
 <script>
 
@@ -391,5 +375,15 @@ $(document).ready(function() {
                 slidesToShow: 1,
               })
             </script>
+<script>
+// Check that service workers are registered
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js');
+  });
+}
+</script>
 
+</body>
 </html>
